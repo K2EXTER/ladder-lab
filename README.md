@@ -18,6 +18,7 @@
 | `dmm/firmware/dmm_stageA/` | 試作 A のファーム(Arduino Mega。シリアルのコマンド: `id` `mon` `v` `refdiff` `noise` `stream`) |
 | `tools/dmmlog.py` | PC で読み値を CSV に記録してグラフにする(`pip install pyserial matplotlib`) |
 | `dmm/spec.md`・`dmm/stageB.*` | DMM の仕様と、次の試作 B(ユニバーサル基板)の設計 |
+| `dmm/stageB-build.md` | 試作 B を組む手順(電源 → ADC → 入力 → リレーの順、段ごとの合格の条件つき) |
 | `psu/spec.md`・`platform.md` | 次に作る線形電源の仕様と、機器の共通の土台の案 |
 | `log.md` | 作業の記録(日付順) |
 

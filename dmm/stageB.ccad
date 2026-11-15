@@ -54,9 +54,10 @@ nc U1.AINCOM U1.GPIO2/AIN10 U1.GPIO3/AIN11 U1.NC U2.TP
 sheet add 入力
 
 add HEADER4 as=J1
-# 10 Mohm divider: HI -> 10M -> DIV_A -> 1M -> DIV_B -> 100k -> VCOM (ratios ~1/10.09 and ~1/111, calibrated)
+# 10 Mohm divider: HI -> 10M -> DIV_A -> 560k -> DIV_B -> 100k -> VCOM (ratios ~1/16.2 and ~1/107, calibrated).
+# 560k (not 1M) keeps DIV_A inside AVDD up to +30 V: 2.45 + 30/16.15 = 4.31 V (with 1M it reached 5.42 V).
 add R 10M as=R1
-add R 1M as=R2
+add R 560k as=R2
 add R 100k as=R3
 # Direct path for the 100 mV and 1 V ranges, and the sense inputs, with series resistors and clamps
 add R 100k as=R4
