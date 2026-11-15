@@ -1,0 +1,5 @@
+# measured data and plots made by tools/dmmlog.py
+*.csv
+*.png
+# build output of the Arduino tools
+build/

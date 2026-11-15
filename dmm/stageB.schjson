@@ -1,0 +1,3617 @@
+{
+  "components": [
+    {
+      "custom": {
+        "name": "ADS124S08_TQFP",
+        "pins": [
+          {
+            "name": "AIN0",
+            "number": "7",
+            "side": "left"
+          },
+          {
+            "name": "AIN1",
+            "number": "6",
+            "side": "left"
+          },
+          {
+            "name": "AIN2",
+            "number": "5",
+            "side": "left"
+          },
+          {
+            "name": "AIN3",
+            "number": "4",
+            "side": "left"
+          },
+          {
+            "name": "AIN4",
+            "number": "3",
+            "side": "left"
+          },
+          {
+            "name": "AIN5",
+            "number": "2",
+            "side": "left"
+          },
+          {
+            "name": "AINCOM",
+            "number": "1",
+            "side": "left"
+          },
+          {
+            "name": "REFP1/AIN6",
+            "number": "32",
+            "side": "left"
+          },
+          {
+            "name": "REFN1/AIN7",
+            "number": "31",
+            "side": "left"
+          },
+          {
+            "name": "REFP0",
+            "number": "30",
+            "side": "left"
+          },
+          {
+            "name": "REFN0",
+            "number": "29",
+            "side": "left"
+          },
+          {
+            "name": "CS",
+            "number": "9",
+            "side": "right"
+          },
+          {
+            "name": "SCLK",
+            "number": "11",
+            "side": "right"
+          },
+          {
+            "name": "DIN",
+            "number": "10",
+            "side": "right"
+          },
+          {
+            "name": "DOUT/DRDY",
+            "number": "12",
+            "side": "right"
+          },
+          {
+            "name": "DRDY",
+            "number": "13",
+            "side": "right"
+          },
+          {
+            "name": "START/SYNC",
+            "number": "8",
+            "side": "right"
+          },
+          {
+            "name": "RESET",
+            "number": "18",
+            "side": "right"
+          },
+          {
+            "name": "CLK",
+            "number": "17",
+            "side": "right"
+          },
+          {
+            "name": "GPIO0/AIN8",
+            "number": "22",
+            "side": "right"
+          },
+          {
+            "name": "GPIO1/AIN9",
+            "number": "21",
+            "side": "right"
+          },
+          {
+            "name": "GPIO2/AIN10",
+            "number": "20",
+            "side": "right"
+          },
+          {
+            "name": "GPIO3/AIN11",
+            "number": "19",
+            "side": "right"
+          },
+          {
+            "name": "AVDD",
+            "number": "26",
+            "side": "top"
+          },
+          {
+            "name": "DVDD",
+            "number": "16",
+            "side": "top"
+          },
+          {
+            "name": "IOVDD",
+            "number": "15",
+            "side": "top"
+          },
+          {
+            "name": "AVSS",
+            "number": "27",
+            "side": "bottom"
+          },
+          {
+            "name": "AVSS-SW",
+            "number": "28",
+            "side": "bottom"
+          },
+          {
+            "name": "DGND",
+            "number": "14",
+            "side": "bottom"
+          },
+          {
+            "name": "REFCOM",
+            "number": "24",
+            "side": "bottom"
+          },
+          {
+            "name": "REFOUT",
+            "number": "23",
+            "side": "bottom"
+          },
+          {
+            "name": "NC",
+            "number": "25",
+            "side": "bottom"
+          }
+        ],
+        "prefix": "U",
+        "sim": null
+      },
+      "footprint": "TQFP-32_5x5_P0.5",
+      "kind": "Custom",
+      "pos": [
+        16,
+        22
+      ],
+      "refdes": "U1",
+      "rot": 0,
+      "value": "ADS124S08"
+    },
+    {
+      "custom": {
+        "name": "ADR4525",
+        "pins": [
+          {
+            "name": "VIN",
+            "number": "2",
+            "side": "left"
+          },
+          {
+            "name": "GND",
+            "number": "4",
+            "side": "bottom"
+          },
+          {
+            "name": "VOUT",
+            "number": "6",
+            "side": "right"
+          },
+          {
+            "name": "NC",
+            "number": "1",
+            "side": "top"
+          },
+          {
+            "name": "NC",
+            "number": "3",
+            "side": "top"
+          },
+          {
+            "name": "NC",
+            "number": "5",
+            "side": "top"
+          },
+          {
+            "name": "NC",
+            "number": "7",
+            "side": "top"
+          },
+          {
+            "name": "TP",
+            "number": "8",
+            "side": "top"
+          }
+        ],
+        "prefix": "U",
+        "sim": {
+          "element": "",
+          "kind": "subckt",
+          "limits": [
+            "データシートの typ の値から作った等価モデルです (メーカーのモデルではありません)。出典: ADI ADR4520/4525/4530/4533/4540/4550 データシート Rev. 0 の表 4 (ADR4525)。データシートとの比べは docs/models/regulators.md。",
+            "再現しているもの: 出力 2.500 V、ライン・レギュレーション 1 ppm/V、ロード・レギュレーション (吐き出し 30 ppm/mA・吸い込み 60 ppm/mA)、電源電流 700 µA、ドロップアウト 0.5 V (データシートは max だけ)、出力電流の能力 ±10 mA (電流の上限は、データシートに短絡電流が無いので、能力の 2 倍の 20 mA で切る)、1 kHz のリップル除去 90 dB、1 kHz の出力雑音 41.3 nV/√Hz。",
+            "扱わないもの: 初期誤差 (B グレード ±0.02%、A グレード ±0.04%) とはんだ付けのずれ (±0.02%) — 出力はちょうど 2.500 V、温度係数 (B グレード max 2 ppm/°C。typ が無いので 0)、ヒステリシス、長期のドリフト、1/f 雑音 (0.1〜10 Hz の 1.25 µVp-p)、起動の時間 (125 µs)、出力の容量 (1 µF 以上が必要) による安定性。",
+            "最終の確認は、メーカーの公式モデルで行ってください。"
+          ],
+          "name": "ADR4525",
+          "params": {},
+          "pins": [
+            "2",
+            "4",
+            "6"
+          ],
+          "text": ".subckt ADR4525 vin gnd vout\n* quiescent current (typ), fading out below about 2 V of input\nBq vin gnd I=0.0007*step(V(vin,gnd)-2,0.5)\n* ripple from the input: rises 20 dB/decade, the data sheet's ripple rejection at 1 kHz\nCr vin h 1e-09\nRr h gnd 5.03292\n* output noise (density at 1 kHz): a 1 k resistor's noise, scaled\nRnz nz gnd 1k\n* the reference: line regulation from 5 V in; below the dropout it follows the input\nBref r gnd V=min(2.5*(1+1e-06*(V(vin,gnd)-5)),V(vin,gnd)-0.5)+V(h,gnd)\nEn r2 r nz gnd 10.144\n* output: sourcing from vin and sinking to gnd through the load regulation's resistance, each up to twice the current capacity\nBsrc vin vout I=limit((V(r2,gnd)-V(vout,gnd))/0.075,0,0.02)*step((V(r2,gnd)-V(vout,gnd))/0.075,1u)\nBsnk vout gnd I=limit((V(vout,gnd)-V(r2,gnd))/0.15,0,0.02)*step((V(vout,gnd)-V(r2,gnd))/0.15,1u)\n.ends ADR4525"
+        }
+      },
+      "footprint": "SOIC-8_3.9x4.9_P1.27",
+      "kind": "Custom",
+      "pos": [
+        39,
+        12
+      ],
+      "refdes": "U2",
+      "rot": 0,
+      "value": "ADR4525"
+    },
+    {
+      "custom": null,
+      "footprint": "C_0805",
+      "kind": "Capacitor",
+      "pos": [
+        10,
+        44
+      ],
+      "refdes": "C1",
+      "rot": 0,
+      "value": "100n"
+    },
+    {
+      "custom": null,
+      "footprint": "C_0805",
+      "kind": "Capacitor",
+      "pos": [
+        22,
+        44
+      ],
+      "refdes": "C2",
+      "rot": 0,
+      "value": "100n"
+    },
+    {
+      "custom": null,
+      "footprint": "C_0805",
+      "kind": "Capacitor",
+      "pos": [
+        34,
+        44
+      ],
+      "refdes": "C3",
+      "rot": 0,
+      "value": "100n"
+    },
+    {
+      "custom": null,
+      "footprint": "C_0805",
+      "kind": "Capacitor",
+      "pos": [
+        46,
+        44
+      ],
+      "refdes": "C4",
+      "rot": 0,
+      "value": "1u"
+    },
+    {
+      "custom": null,
+      "footprint": "C_0805",
+      "kind": "Capacitor",
+      "pos": [
+        10,
+        52
+      ],
+      "refdes": "C5",
+      "rot": 0,
+      "value": "1u"
+    },
+    {
+      "custom": null,
+      "footprint": "C_0805",
+      "kind": "Capacitor",
+      "pos": [
+        22,
+        52
+      ],
+      "refdes": "C6",
+      "rot": 0,
+      "value": "100n"
+    },
+    {
+      "custom": null,
+      "footprint": "C_0805",
+      "kind": "Capacitor",
+      "pos": [
+        34,
+        52
+      ],
+      "refdes": "C7",
+      "rot": 0,
+      "value": "1u"
+    },
+    {
+      "custom": null,
+      "footprint": "",
+      "kind": "Ground",
+      "pos": [
+        44,
+        52
+      ],
+      "refdes": "#PWR01",
+      "rot": 0,
+      "value": "GND"
+    }
+  ],
+  "labels": [
+    {
+      "pos": [
+        18,
+        8
+      ],
+      "text": "5V"
+    },
+    {
+      "pos": [
+        8,
+        44
+      ],
+      "text": "5V"
+    },
+    {
+      "pos": [
+        16,
+        8
+      ],
+      "text": "3V3"
+    },
+    {
+      "pos": [
+        20,
+        44
+      ],
+      "text": "3V3"
+    },
+    {
+      "pos": [
+        14,
+        8
+      ],
+      "text": "AVDD"
+    },
+    {
+      "pos": [
+        32,
+        44
+      ],
+      "text": "AVDD"
+    },
+    {
+      "pos": [
+        44,
+        44
+      ],
+      "text": "AVDD"
+    },
+    {
+      "pos": [
+        32,
+        12
+      ],
+      "text": "AVDD"
+    },
+    {
+      "pos": [
+        20,
+        52
+      ],
+      "text": "AVDD"
+    },
+    {
+      "pos": [
+        8,
+        26
+      ],
+      "text": "AVDD"
+    },
+    {
+      "pos": [
+        11,
+        36
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        13,
+        36
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        15,
+        36
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        17,
+        36
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        24,
+        25
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        8,
+        32
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        12,
+        44
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        24,
+        44
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        36,
+        44
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        48,
+        44
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        12,
+        52
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        24,
+        52
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        36,
+        52
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        39,
+        16
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        19,
+        36
+      ],
+      "text": "REFOUT"
+    },
+    {
+      "pos": [
+        8,
+        52
+      ],
+      "text": "REFOUT"
+    },
+    {
+      "pos": [
+        24,
+        29
+      ],
+      "text": "REFOUT"
+    },
+    {
+      "pos": [
+        46,
+        12
+      ],
+      "text": "ADRREF"
+    },
+    {
+      "pos": [
+        32,
+        52
+      ],
+      "text": "ADRREF"
+    },
+    {
+      "pos": [
+        24,
+        27
+      ],
+      "text": "ADRREF"
+    },
+    {
+      "pos": [
+        8,
+        30
+      ],
+      "text": "ADRREF"
+    },
+    {
+      "pos": [
+        8,
+        12
+      ],
+      "text": "DIRECT"
+    },
+    {
+      "pos": [
+        8,
+        14
+      ],
+      "text": "DIV_A"
+    },
+    {
+      "pos": [
+        8,
+        16
+      ],
+      "text": "DIV_B"
+    },
+    {
+      "pos": [
+        8,
+        18
+      ],
+      "text": "VCOM"
+    },
+    {
+      "pos": [
+        8,
+        20
+      ],
+      "text": "HI_S_IN"
+    },
+    {
+      "pos": [
+        8,
+        22
+      ],
+      "text": "LO_S_IN"
+    },
+    {
+      "pos": [
+        8,
+        28
+      ],
+      "text": "RBOT_S"
+    },
+    {
+      "pos": [
+        24,
+        17
+      ],
+      "text": "MISO"
+    },
+    {
+      "pos": [
+        24,
+        15
+      ],
+      "text": "MOSI"
+    },
+    {
+      "pos": [
+        24,
+        13
+      ],
+      "text": "SCLK"
+    },
+    {
+      "pos": [
+        24,
+        11
+      ],
+      "text": "CS"
+    },
+    {
+      "pos": [
+        24,
+        19
+      ],
+      "text": "DRDY"
+    },
+    {
+      "pos": [
+        24,
+        21
+      ],
+      "text": "START"
+    },
+    {
+      "pos": [
+        24,
+        23
+      ],
+      "text": "RESET"
+    }
+  ],
+  "layout_version": 1,
+  "no_connects": [
+    [
+      "U1",
+      "1"
+    ],
+    [
+      "U1",
+      "20"
+    ],
+    [
+      "U1",
+      "19"
+    ],
+    [
+      "U1",
+      "25"
+    ],
+    [
+      "U2",
+      "8"
+    ],
+    [
+      "K1",
+      "2"
+    ],
+    [
+      "K1",
+      "9"
+    ],
+    [
+      "K2",
+      "2"
+    ],
+    [
+      "K2",
+      "9"
+    ],
+    [
+      "K3",
+      "2"
+    ],
+    [
+      "K3",
+      "9"
+    ],
+    [
+      "K4",
+      "2"
+    ],
+    [
+      "K4",
+      "9"
+    ],
+    [
+      "K5",
+      "2"
+    ],
+    [
+      "K5",
+      "9"
+    ],
+    [
+      "K6",
+      "8"
+    ],
+    [
+      "K6",
+      "7"
+    ],
+    [
+      "K6",
+      "2"
+    ],
+    [
+      "K6",
+      "9"
+    ],
+    [
+      "K7",
+      "8"
+    ],
+    [
+      "K7",
+      "7"
+    ],
+    [
+      "K7",
+      "2"
+    ],
+    [
+      "K7",
+      "9"
+    ],
+    [
+      "K8",
+      "2"
+    ],
+    [
+      "K8",
+      "9"
+    ],
+    [
+      "U3",
+      "4"
+    ]
+  ],
+  "sheets": [
+    {
+      "components": [],
+      "labels": [],
+      "name": "測定",
+      "wires": []
+    },
+    {
+      "components": [
+        {
+          "custom": null,
+          "footprint": "PinHeader_1x4",
+          "kind": {
+            "Header": 4
+          },
+          "pin_names": [
+            "HI",
+            "LO",
+            "HI_S",
+            "LO_S"
+          ],
+          "pos": [
+            6,
+            8
+          ],
+          "refdes": "J1",
+          "rot": 0,
+          "value": "Conn"
+        },
+        {
+          "custom": null,
+          "footprint": "R_0805",
+          "kind": "Resistor",
+          "pos": [
+            18,
+            8
+          ],
+          "refdes": "R1",
+          "rot": 0,
+          "value": "10M"
+        },
+        {
+          "custom": null,
+          "footprint": "R_0805",
+          "kind": "Resistor",
+          "pos": [
+            30,
+            8
+          ],
+          "refdes": "R2",
+          "rot": 0,
+          "value": "1M"
+        },
+        {
+          "custom": null,
+          "footprint": "R_0805",
+          "kind": "Resistor",
+          "pos": [
+            42,
+            8
+          ],
+          "refdes": "R3",
+          "rot": 0,
+          "value": "100k"
+        },
+        {
+          "custom": null,
+          "footprint": "R_0805",
+          "kind": "Resistor",
+          "pos": [
+            54,
+            8
+          ],
+          "refdes": "R4",
+          "rot": 0,
+          "value": "100k"
+        },
+        {
+          "custom": null,
+          "footprint": "R_0805",
+          "kind": "Resistor",
+          "pos": [
+            66,
+            8
+          ],
+          "refdes": "R5",
+          "rot": 0,
+          "value": "10k"
+        },
+        {
+          "custom": null,
+          "footprint": "R_0805",
+          "kind": "Resistor",
+          "pos": [
+            78,
+            8
+          ],
+          "refdes": "R6",
+          "rot": 0,
+          "value": "10k"
+        },
+        {
+          "custom": {
+            "name": "BAV199",
+            "pins": [
+              {
+                "name": "A",
+                "number": "1",
+                "side": "bottom"
+              },
+              {
+                "name": "MID",
+                "number": "3",
+                "side": "left"
+              },
+              {
+                "name": "K",
+                "number": "2",
+                "side": "top"
+              }
+            ],
+            "prefix": "D",
+            "sim": null
+          },
+          "footprint": "SOT-23",
+          "kind": "Custom",
+          "pos": [
+            12,
+            26
+          ],
+          "refdes": "D1",
+          "rot": 0,
+          "value": "BAV199"
+        },
+        {
+          "custom": {
+            "name": "BAV199",
+            "pins": [
+              {
+                "name": "A",
+                "number": "1",
+                "side": "bottom"
+              },
+              {
+                "name": "MID",
+                "number": "3",
+                "side": "left"
+              },
+              {
+                "name": "K",
+                "number": "2",
+                "side": "top"
+              }
+            ],
+            "prefix": "D",
+            "sim": null
+          },
+          "footprint": "SOT-23",
+          "kind": "Custom",
+          "pos": [
+            26,
+            26
+          ],
+          "refdes": "D2",
+          "rot": 0,
+          "value": "BAV199"
+        },
+        {
+          "custom": {
+            "name": "BAV199",
+            "pins": [
+              {
+                "name": "A",
+                "number": "1",
+                "side": "bottom"
+              },
+              {
+                "name": "MID",
+                "number": "3",
+                "side": "left"
+              },
+              {
+                "name": "K",
+                "number": "2",
+                "side": "top"
+              }
+            ],
+            "prefix": "D",
+            "sim": null
+          },
+          "footprint": "SOT-23",
+          "kind": "Custom",
+          "pos": [
+            40,
+            26
+          ],
+          "refdes": "D3",
+          "rot": 0,
+          "value": "BAV199"
+        },
+        {
+          "custom": null,
+          "footprint": "R_0805",
+          "kind": "Resistor",
+          "pos": [
+            52,
+            22
+          ],
+          "refdes": "R11",
+          "rot": 0,
+          "value": "1k"
+        },
+        {
+          "custom": null,
+          "footprint": "R_0805",
+          "kind": "Resistor",
+          "pos": [
+            64,
+            22
+          ],
+          "refdes": "R12",
+          "rot": 0,
+          "value": "10k"
+        },
+        {
+          "custom": null,
+          "footprint": "R_0805",
+          "kind": "Resistor",
+          "pos": [
+            76,
+            22
+          ],
+          "refdes": "R13",
+          "rot": 0,
+          "value": "100k"
+        },
+        {
+          "custom": null,
+          "footprint": "R_0805",
+          "kind": "Resistor",
+          "pos": [
+            10,
+            38
+          ],
+          "refdes": "R14",
+          "rot": 0,
+          "value": "1M"
+        },
+        {
+          "custom": null,
+          "footprint": "R_0805",
+          "kind": "Resistor",
+          "pos": [
+            22,
+            38
+          ],
+          "refdes": "R15",
+          "rot": 0,
+          "value": "10M"
+        },
+        {
+          "custom": {
+            "name": "TQ2-L2-5V",
+            "pins": [
+              {
+                "name": "SET+",
+                "number": "1",
+                "side": "left"
+              },
+              {
+                "name": "SET-",
+                "number": "5",
+                "side": "left"
+              },
+              {
+                "name": "RST+",
+                "number": "10",
+                "side": "left"
+              },
+              {
+                "name": "RST-",
+                "number": "6",
+                "side": "left"
+              },
+              {
+                "name": "COM1",
+                "number": "3",
+                "side": "right"
+              },
+              {
+                "name": "SET1",
+                "number": "4",
+                "side": "right"
+              },
+              {
+                "name": "RST1",
+                "number": "2",
+                "side": "right"
+              },
+              {
+                "gap": 1,
+                "name": "COM2",
+                "number": "8",
+                "side": "right"
+              },
+              {
+                "name": "SET2",
+                "number": "7",
+                "side": "right"
+              },
+              {
+                "name": "RST2",
+                "number": "9",
+                "side": "right"
+              }
+            ],
+            "prefix": "K",
+            "sim": null
+          },
+          "footprint": "Relay_TQ2_THT",
+          "kind": "Custom",
+          "pos": [
+            36,
+            45
+          ],
+          "refdes": "K1",
+          "rot": 0,
+          "value": "TQ2-L2-5V"
+        },
+        {
+          "custom": {
+            "name": "TQ2-L2-5V",
+            "pins": [
+              {
+                "name": "SET+",
+                "number": "1",
+                "side": "left"
+              },
+              {
+                "name": "SET-",
+                "number": "5",
+                "side": "left"
+              },
+              {
+                "name": "RST+",
+                "number": "10",
+                "side": "left"
+              },
+              {
+                "name": "RST-",
+                "number": "6",
+                "side": "left"
+              },
+              {
+                "name": "COM1",
+                "number": "3",
+                "side": "right"
+              },
+              {
+                "name": "SET1",
+                "number": "4",
+                "side": "right"
+              },
+              {
+                "name": "RST1",
+                "number": "2",
+                "side": "right"
+              },
+              {
+                "gap": 1,
+                "name": "COM2",
+                "number": "8",
+                "side": "right"
+              },
+              {
+                "name": "SET2",
+                "number": "7",
+                "side": "right"
+              },
+              {
+                "name": "RST2",
+                "number": "9",
+                "side": "right"
+              }
+            ],
+            "prefix": "K",
+            "sim": null
+          },
+          "footprint": "Relay_TQ2_THT",
+          "kind": "Custom",
+          "pos": [
+            52,
+            45
+          ],
+          "refdes": "K2",
+          "rot": 0,
+          "value": "TQ2-L2-5V"
+        },
+        {
+          "custom": {
+            "name": "TQ2-L2-5V",
+            "pins": [
+              {
+                "name": "SET+",
+                "number": "1",
+                "side": "left"
+              },
+              {
+                "name": "SET-",
+                "number": "5",
+                "side": "left"
+              },
+              {
+                "name": "RST+",
+                "number": "10",
+                "side": "left"
+              },
+              {
+                "name": "RST-",
+                "number": "6",
+                "side": "left"
+              },
+              {
+                "name": "COM1",
+                "number": "3",
+                "side": "right"
+              },
+              {
+                "name": "SET1",
+                "number": "4",
+                "side": "right"
+              },
+              {
+                "name": "RST1",
+                "number": "2",
+                "side": "right"
+              },
+              {
+                "gap": 1,
+                "name": "COM2",
+                "number": "8",
+                "side": "right"
+              },
+              {
+                "name": "SET2",
+                "number": "7",
+                "side": "right"
+              },
+              {
+                "name": "RST2",
+                "number": "9",
+                "side": "right"
+              }
+            ],
+            "prefix": "K",
+            "sim": null
+          },
+          "footprint": "Relay_TQ2_THT",
+          "kind": "Custom",
+          "pos": [
+            68,
+            45
+          ],
+          "refdes": "K3",
+          "rot": 0,
+          "value": "TQ2-L2-5V"
+        },
+        {
+          "custom": {
+            "name": "TQ2-L2-5V",
+            "pins": [
+              {
+                "name": "SET+",
+                "number": "1",
+                "side": "left"
+              },
+              {
+                "name": "SET-",
+                "number": "5",
+                "side": "left"
+              },
+              {
+                "name": "RST+",
+                "number": "10",
+                "side": "left"
+              },
+              {
+                "name": "RST-",
+                "number": "6",
+                "side": "left"
+              },
+              {
+                "name": "COM1",
+                "number": "3",
+                "side": "right"
+              },
+              {
+                "name": "SET1",
+                "number": "4",
+                "side": "right"
+              },
+              {
+                "name": "RST1",
+                "number": "2",
+                "side": "right"
+              },
+              {
+                "gap": 1,
+                "name": "COM2",
+                "number": "8",
+                "side": "right"
+              },
+              {
+                "name": "SET2",
+                "number": "7",
+                "side": "right"
+              },
+              {
+                "name": "RST2",
+                "number": "9",
+                "side": "right"
+              }
+            ],
+            "prefix": "K",
+            "sim": null
+          },
+          "footprint": "Relay_TQ2_THT",
+          "kind": "Custom",
+          "pos": [
+            84,
+            45
+          ],
+          "refdes": "K4",
+          "rot": 0,
+          "value": "TQ2-L2-5V"
+        },
+        {
+          "custom": {
+            "name": "TQ2-L2-5V",
+            "pins": [
+              {
+                "name": "SET+",
+                "number": "1",
+                "side": "left"
+              },
+              {
+                "name": "SET-",
+                "number": "5",
+                "side": "left"
+              },
+              {
+                "name": "RST+",
+                "number": "10",
+                "side": "left"
+              },
+              {
+                "name": "RST-",
+                "number": "6",
+                "side": "left"
+              },
+              {
+                "name": "COM1",
+                "number": "3",
+                "side": "right"
+              },
+              {
+                "name": "SET1",
+                "number": "4",
+                "side": "right"
+              },
+              {
+                "name": "RST1",
+                "number": "2",
+                "side": "right"
+              },
+              {
+                "gap": 1,
+                "name": "COM2",
+                "number": "8",
+                "side": "right"
+              },
+              {
+                "name": "SET2",
+                "number": "7",
+                "side": "right"
+              },
+              {
+                "name": "RST2",
+                "number": "9",
+                "side": "right"
+              }
+            ],
+            "prefix": "K",
+            "sim": null
+          },
+          "footprint": "Relay_TQ2_THT",
+          "kind": "Custom",
+          "pos": [
+            12,
+            67
+          ],
+          "refdes": "K5",
+          "rot": 0,
+          "value": "TQ2-L2-5V"
+        },
+        {
+          "custom": {
+            "name": "TQ2-L2-5V",
+            "pins": [
+              {
+                "name": "SET+",
+                "number": "1",
+                "side": "left"
+              },
+              {
+                "name": "SET-",
+                "number": "5",
+                "side": "left"
+              },
+              {
+                "name": "RST+",
+                "number": "10",
+                "side": "left"
+              },
+              {
+                "name": "RST-",
+                "number": "6",
+                "side": "left"
+              },
+              {
+                "name": "COM1",
+                "number": "3",
+                "side": "right"
+              },
+              {
+                "name": "SET1",
+                "number": "4",
+                "side": "right"
+              },
+              {
+                "name": "RST1",
+                "number": "2",
+                "side": "right"
+              },
+              {
+                "gap": 1,
+                "name": "COM2",
+                "number": "8",
+                "side": "right"
+              },
+              {
+                "name": "SET2",
+                "number": "7",
+                "side": "right"
+              },
+              {
+                "name": "RST2",
+                "number": "9",
+                "side": "right"
+              }
+            ],
+            "prefix": "K",
+            "sim": null
+          },
+          "footprint": "Relay_TQ2_THT",
+          "kind": "Custom",
+          "pos": [
+            28,
+            67
+          ],
+          "refdes": "K6",
+          "rot": 0,
+          "value": "TQ2-L2-5V"
+        },
+        {
+          "custom": {
+            "name": "TQ2-L2-5V",
+            "pins": [
+              {
+                "name": "SET+",
+                "number": "1",
+                "side": "left"
+              },
+              {
+                "name": "SET-",
+                "number": "5",
+                "side": "left"
+              },
+              {
+                "name": "RST+",
+                "number": "10",
+                "side": "left"
+              },
+              {
+                "name": "RST-",
+                "number": "6",
+                "side": "left"
+              },
+              {
+                "name": "COM1",
+                "number": "3",
+                "side": "right"
+              },
+              {
+                "name": "SET1",
+                "number": "4",
+                "side": "right"
+              },
+              {
+                "name": "RST1",
+                "number": "2",
+                "side": "right"
+              },
+              {
+                "gap": 1,
+                "name": "COM2",
+                "number": "8",
+                "side": "right"
+              },
+              {
+                "name": "SET2",
+                "number": "7",
+                "side": "right"
+              },
+              {
+                "name": "RST2",
+                "number": "9",
+                "side": "right"
+              }
+            ],
+            "prefix": "K",
+            "sim": null
+          },
+          "footprint": "Relay_TQ2_THT",
+          "kind": "Custom",
+          "pos": [
+            44,
+            67
+          ],
+          "refdes": "K7",
+          "rot": 0,
+          "value": "TQ2-L2-5V"
+        },
+        {
+          "custom": {
+            "name": "TQ2-L2-5V",
+            "pins": [
+              {
+                "name": "SET+",
+                "number": "1",
+                "side": "left"
+              },
+              {
+                "name": "SET-",
+                "number": "5",
+                "side": "left"
+              },
+              {
+                "name": "RST+",
+                "number": "10",
+                "side": "left"
+              },
+              {
+                "name": "RST-",
+                "number": "6",
+                "side": "left"
+              },
+              {
+                "name": "COM1",
+                "number": "3",
+                "side": "right"
+              },
+              {
+                "name": "SET1",
+                "number": "4",
+                "side": "right"
+              },
+              {
+                "name": "RST1",
+                "number": "2",
+                "side": "right"
+              },
+              {
+                "gap": 1,
+                "name": "COM2",
+                "number": "8",
+                "side": "right"
+              },
+              {
+                "name": "SET2",
+                "number": "7",
+                "side": "right"
+              },
+              {
+                "name": "RST2",
+                "number": "9",
+                "side": "right"
+              }
+            ],
+            "prefix": "K",
+            "sim": null
+          },
+          "footprint": "Relay_TQ2_THT",
+          "kind": "Custom",
+          "pos": [
+            60,
+            67
+          ],
+          "refdes": "K8",
+          "rot": 0,
+          "value": "TQ2-L2-5V"
+        },
+        {
+          "custom": null,
+          "footprint": "",
+          "kind": "Ground",
+          "pos": [
+            72,
+            60
+          ],
+          "refdes": "#PWR01",
+          "rot": 0,
+          "value": "GND"
+        }
+      ],
+      "labels": [
+        {
+          "pos": [
+            8,
+            8
+          ],
+          "text": "HI"
+        },
+        {
+          "pos": [
+            32,
+            61
+          ],
+          "text": "HI"
+        },
+        {
+          "pos": [
+            48,
+            61
+          ],
+          "text": "HI"
+        },
+        {
+          "pos": [
+            64,
+            61
+          ],
+          "text": "HI"
+        },
+        {
+          "pos": [
+            40,
+            41
+          ],
+          "text": "HI"
+        },
+        {
+          "pos": [
+            56,
+            41
+          ],
+          "text": "HI"
+        },
+        {
+          "pos": [
+            72,
+            41
+          ],
+          "text": "HI"
+        },
+        {
+          "pos": [
+            88,
+            41
+          ],
+          "text": "HI"
+        },
+        {
+          "pos": [
+            16,
+            63
+          ],
+          "text": "HI"
+        },
+        {
+          "pos": [
+            8,
+            10
+          ],
+          "text": "VCOM"
+        },
+        {
+          "pos": [
+            64,
+            69
+          ],
+          "text": "VCOM"
+        },
+        {
+          "pos": [
+            44,
+            8
+          ],
+          "text": "VCOM"
+        },
+        {
+          "pos": [
+            8,
+            12
+          ],
+          "text": "HI_S"
+        },
+        {
+          "pos": [
+            64,
+            63
+          ],
+          "text": "HI_S"
+        },
+        {
+          "pos": [
+            64,
+            8
+          ],
+          "text": "HI_S"
+        },
+        {
+          "pos": [
+            8,
+            14
+          ],
+          "text": "LO_S"
+        },
+        {
+          "pos": [
+            64,
+            71
+          ],
+          "text": "LO_S"
+        },
+        {
+          "pos": [
+            76,
+            8
+          ],
+          "text": "LO_S"
+        },
+        {
+          "pos": [
+            32,
+            63
+          ],
+          "text": "DIV_TOP"
+        },
+        {
+          "pos": [
+            16,
+            8
+          ],
+          "text": "DIV_TOP"
+        },
+        {
+          "pos": [
+            20,
+            8
+          ],
+          "text": "DIV_A"
+        },
+        {
+          "pos": [
+            28,
+            8
+          ],
+          "text": "DIV_A"
+        },
+        {
+          "pos": [
+            32,
+            8
+          ],
+          "text": "DIV_B"
+        },
+        {
+          "pos": [
+            40,
+            8
+          ],
+          "text": "DIV_B"
+        },
+        {
+          "pos": [
+            48,
+            63
+          ],
+          "text": "DIR_IN"
+        },
+        {
+          "pos": [
+            52,
+            8
+          ],
+          "text": "DIR_IN"
+        },
+        {
+          "pos": [
+            56,
+            8
+          ],
+          "text": "DIRECT"
+        },
+        {
+          "pos": [
+            8,
+            26
+          ],
+          "text": "DIRECT"
+        },
+        {
+          "pos": [
+            68,
+            8
+          ],
+          "text": "HI_S_IN"
+        },
+        {
+          "pos": [
+            22,
+            26
+          ],
+          "text": "HI_S_IN"
+        },
+        {
+          "pos": [
+            80,
+            8
+          ],
+          "text": "LO_S_IN"
+        },
+        {
+          "pos": [
+            36,
+            26
+          ],
+          "text": "LO_S_IN"
+        },
+        {
+          "pos": [
+            12,
+            22
+          ],
+          "text": "AVDD"
+        },
+        {
+          "pos": [
+            26,
+            22
+          ],
+          "text": "AVDD"
+        },
+        {
+          "pos": [
+            40,
+            22
+          ],
+          "text": "AVDD"
+        },
+        {
+          "pos": [
+            50,
+            22
+          ],
+          "text": "AVDD"
+        },
+        {
+          "pos": [
+            62,
+            22
+          ],
+          "text": "AVDD"
+        },
+        {
+          "pos": [
+            74,
+            22
+          ],
+          "text": "AVDD"
+        },
+        {
+          "pos": [
+            8,
+            38
+          ],
+          "text": "AVDD"
+        },
+        {
+          "pos": [
+            20,
+            38
+          ],
+          "text": "AVDD"
+        },
+        {
+          "pos": [
+            12,
+            30
+          ],
+          "text": "GND"
+        },
+        {
+          "pos": [
+            26,
+            30
+          ],
+          "text": "GND"
+        },
+        {
+          "pos": [
+            40,
+            30
+          ],
+          "text": "GND"
+        },
+        {
+          "pos": [
+            54,
+            22
+          ],
+          "text": "RB1"
+        },
+        {
+          "pos": [
+            40,
+            39
+          ],
+          "text": "RB1"
+        },
+        {
+          "pos": [
+            40,
+            47
+          ],
+          "text": "RB1"
+        },
+        {
+          "pos": [
+            66,
+            22
+          ],
+          "text": "RB2"
+        },
+        {
+          "pos": [
+            56,
+            39
+          ],
+          "text": "RB2"
+        },
+        {
+          "pos": [
+            56,
+            47
+          ],
+          "text": "RB2"
+        },
+        {
+          "pos": [
+            78,
+            22
+          ],
+          "text": "RB3"
+        },
+        {
+          "pos": [
+            72,
+            39
+          ],
+          "text": "RB3"
+        },
+        {
+          "pos": [
+            72,
+            47
+          ],
+          "text": "RB3"
+        },
+        {
+          "pos": [
+            12,
+            38
+          ],
+          "text": "RB4"
+        },
+        {
+          "pos": [
+            88,
+            39
+          ],
+          "text": "RB4"
+        },
+        {
+          "pos": [
+            88,
+            47
+          ],
+          "text": "RB4"
+        },
+        {
+          "pos": [
+            24,
+            38
+          ],
+          "text": "RB5"
+        },
+        {
+          "pos": [
+            16,
+            61
+          ],
+          "text": "RB5"
+        },
+        {
+          "pos": [
+            16,
+            69
+          ],
+          "text": "RB5"
+        },
+        {
+          "pos": [
+            40,
+            49
+          ],
+          "text": "RBOT_S"
+        },
+        {
+          "pos": [
+            56,
+            49
+          ],
+          "text": "RBOT_S"
+        },
+        {
+          "pos": [
+            72,
+            49
+          ],
+          "text": "RBOT_S"
+        },
+        {
+          "pos": [
+            88,
+            49
+          ],
+          "text": "RBOT_S"
+        },
+        {
+          "pos": [
+            16,
+            71
+          ],
+          "text": "RBOT_S"
+        },
+        {
+          "pos": [
+            32,
+            42
+          ],
+          "text": "5V"
+        },
+        {
+          "pos": [
+            32,
+            46
+          ],
+          "text": "5V"
+        },
+        {
+          "pos": [
+            48,
+            42
+          ],
+          "text": "5V"
+        },
+        {
+          "pos": [
+            48,
+            46
+          ],
+          "text": "5V"
+        },
+        {
+          "pos": [
+            64,
+            42
+          ],
+          "text": "5V"
+        },
+        {
+          "pos": [
+            64,
+            46
+          ],
+          "text": "5V"
+        },
+        {
+          "pos": [
+            80,
+            42
+          ],
+          "text": "5V"
+        },
+        {
+          "pos": [
+            80,
+            46
+          ],
+          "text": "5V"
+        },
+        {
+          "pos": [
+            8,
+            64
+          ],
+          "text": "5V"
+        },
+        {
+          "pos": [
+            8,
+            68
+          ],
+          "text": "5V"
+        },
+        {
+          "pos": [
+            24,
+            64
+          ],
+          "text": "5V"
+        },
+        {
+          "pos": [
+            24,
+            68
+          ],
+          "text": "5V"
+        },
+        {
+          "pos": [
+            40,
+            64
+          ],
+          "text": "5V"
+        },
+        {
+          "pos": [
+            40,
+            68
+          ],
+          "text": "5V"
+        },
+        {
+          "pos": [
+            56,
+            64
+          ],
+          "text": "5V"
+        },
+        {
+          "pos": [
+            56,
+            68
+          ],
+          "text": "5V"
+        },
+        {
+          "pos": [
+            32,
+            44
+          ],
+          "text": "K1S"
+        },
+        {
+          "pos": [
+            32,
+            48
+          ],
+          "text": "K1R"
+        },
+        {
+          "pos": [
+            48,
+            44
+          ],
+          "text": "K2S"
+        },
+        {
+          "pos": [
+            48,
+            48
+          ],
+          "text": "K2R"
+        },
+        {
+          "pos": [
+            64,
+            44
+          ],
+          "text": "K3S"
+        },
+        {
+          "pos": [
+            64,
+            48
+          ],
+          "text": "K3R"
+        },
+        {
+          "pos": [
+            80,
+            44
+          ],
+          "text": "K4S"
+        },
+        {
+          "pos": [
+            80,
+            48
+          ],
+          "text": "K4R"
+        },
+        {
+          "pos": [
+            8,
+            66
+          ],
+          "text": "K5S"
+        },
+        {
+          "pos": [
+            8,
+            70
+          ],
+          "text": "K5R"
+        },
+        {
+          "pos": [
+            24,
+            66
+          ],
+          "text": "K6S"
+        },
+        {
+          "pos": [
+            24,
+            70
+          ],
+          "text": "K6R"
+        },
+        {
+          "pos": [
+            40,
+            66
+          ],
+          "text": "K7S"
+        },
+        {
+          "pos": [
+            40,
+            70
+          ],
+          "text": "K7R"
+        },
+        {
+          "pos": [
+            56,
+            66
+          ],
+          "text": "K8S"
+        },
+        {
+          "pos": [
+            56,
+            70
+          ],
+          "text": "K8R"
+        }
+      ],
+      "name": "入力",
+      "wires": []
+    },
+    {
+      "components": [
+        {
+          "custom": {
+            "name": "LP5907-4.5",
+            "pins": [
+              {
+                "name": "IN",
+                "number": "1",
+                "side": "left"
+              },
+              {
+                "name": "EN",
+                "number": "3",
+                "side": "left"
+              },
+              {
+                "name": "OUT",
+                "number": "5",
+                "side": "right"
+              },
+              {
+                "name": "NC",
+                "number": "4",
+                "side": "right"
+              },
+              {
+                "name": "GND",
+                "number": "2",
+                "side": "bottom"
+              }
+            ],
+            "prefix": "U",
+            "sim": {
+              "element": "",
+              "kind": "subckt",
+              "limits": [
+                "データシートの typ の値から作った等価モデルです (メーカーのモデルではありません)。出典: TI LP5907 データシート SNVS798Q の 5.5 節 (VIN = 5.5 V、IOUT = 1 mA、CIN = COUT = 1 µF)。データシートとの比べは docs/models/regulators.md。",
+                "再現しているもの: 出力 4.5 V、ライン・レギュレーション 0.02 %/V、ロード・レギュレーション 0.001 %/mA、電源電流 (無負荷 12 µA、250 mA で 250 µA、停止中 0.2 µA)、ドロップアウト (100 mA で 50 mV)、電流制限 500 mA、PSRR (100 Hz 90 dB・1 kHz 82 dB・10 kHz 65 dB・100 kHz 60 dB の近似)、出力雑音 10 µVrms (10 Hz〜100 kHz を平らとした)、EN (1 MΩ のプルダウン、0.8 V で切り替え)、起動 80 µs、停止中の放電 230 Ω。",
+                "扱わないもの: 出力電圧の誤差 (±2%) — 出力はちょうど 4.5 V、出力コンデンサの容量・ESR による安定性 (どのコンデンサでも安定に動きます)、負荷の急変での応答 (データシート ±40 mV)、熱による停止、温度による変化。",
+                "最終の確認は、メーカーの公式モデルで行ってください。"
+              ],
+              "name": "LP5907-4.5",
+              "params": {},
+              "pins": [
+                "1",
+                "2",
+                "3",
+                "5"
+              ],
+              "text": ".subckt LP5907-4.5 in gnd en out\n* enable: 1 Meg pull-down; on half way between the low and high thresholds; soft start to 95 % in the turn-on time\nRen en gnd 1e+06\nBon on gnd V=step(V(en,gnd)-0.8,0.05)\nRss on ss 2.66667\nCss ss gnd 10u\n* line regulation (slow, as the data sheet's DC figure) and the ripple from the input (a floor and a high-pass)\nRlf in lf 1.59Meg\nClf lf gnd 100n\nRhp_c in hp1 1\nChp hp1 hp 1e-09\nRhp hp gnd 10610.3\n* output noise (10 Hz to 100 kHz, taken as flat): a 1 k resistor's noise, scaled\nRnz nz gnd 1k\nBtgt t0 gnd V=V(ss,gnd)*4.5*(1+0.0002*(V(lf,gnd)-5.5))+3.16228e-05*(V(in,gnd)-5.5)+0.001*V(hp,gnd)\nEn tgt t0 nz gnd 7.76749\n* pass device: the error amplifier's current (the load regulation), no more than the input allows through the pass\n* device's resistance (dropout) and the current limit; only from in to out\nBpass in out I=max(min(min(22.2222*(V(tgt,gnd)-V(out,gnd)),(V(in,gnd)-V(out,gnd))/0.5),0.5),0)\n* quiescent current: grows with the load; a little when disabled\nBq in gnd I=V(ss,gnd)*(1.2e-05+0.000952*max(min(min(22.2222*(V(tgt,gnd)-V(out,gnd)),(V(in,gnd)-V(out,gnd))/0.5),0.5),0))+2e-07\n* output discharge when disabled\nBdis out gnd I=(1-V(ss,gnd))*V(out,gnd)/230\n.ends LP5907-4.5"
+            }
+          },
+          "footprint": "SOT-23-5",
+          "kind": "Custom",
+          "pos": [
+            12,
+            10
+          ],
+          "refdes": "U3",
+          "rot": 0,
+          "value": "LP5907-4.5"
+        },
+        {
+          "custom": null,
+          "footprint": "C_0805",
+          "kind": "Capacitor",
+          "pos": [
+            26,
+            8
+          ],
+          "refdes": "C11",
+          "rot": 0,
+          "value": "1u"
+        },
+        {
+          "custom": null,
+          "footprint": "C_0805",
+          "kind": "Capacitor",
+          "pos": [
+            38,
+            8
+          ],
+          "refdes": "C12",
+          "rot": 0,
+          "value": "1u"
+        },
+        {
+          "custom": {
+            "name": "ADA4522-2",
+            "pins": [
+              {
+                "name": "OUTA",
+                "number": "1",
+                "side": "right"
+              },
+              {
+                "name": "-INA",
+                "number": "2",
+                "side": "left"
+              },
+              {
+                "name": "+INA",
+                "number": "3",
+                "side": "left"
+              },
+              {
+                "name": "V-",
+                "number": "4",
+                "side": "bottom"
+              },
+              {
+                "name": "+INB",
+                "number": "5",
+                "side": "left"
+              },
+              {
+                "name": "-INB",
+                "number": "6",
+                "side": "left"
+              },
+              {
+                "name": "OUTB",
+                "number": "7",
+                "side": "right"
+              },
+              {
+                "name": "V+",
+                "number": "8",
+                "side": "top"
+              }
+            ],
+            "prefix": "U",
+            "ratings": {
+              "rows": [
+                {
+                  "name": "電源電圧",
+                  "value": "4.5〜55V"
+                },
+                {
+                  "name": "利得帯域幅積",
+                  "value": "3MHz (代表)"
+                }
+              ],
+              "v_max": 55.0
+            },
+            "sim": {
+              "element": "",
+              "kind": "subckt",
+              "limits": [
+                "メーカー (ADI) の SPICE マクロモデル (25℃) をそのまま使っています。温度による変化は扱いません。",
+                "電源は 4.5V 以上 (最大 55V) で使う部品です。入力電圧の範囲はデータシートで確かめてください。",
+                "雑音は、このシミュレータの雑音解析で確かめてください (1/f 雑音の係数は ngspice 流の書き方のため、使われないことがあります)。"
+              ],
+              "name": "ADA4522_2",
+              "params": {
+                "gbw": 3000000.0
+              },
+              "pins": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8"
+              ],
+              "text": ".SUBCKT ADA4522         1   2   99  50  45\nM1   4  7  8  8 PIX L=1E-6 W=1.18E-04\nM2   6  2  8  8 PIX L=1E-6 W=1.18E-04\nM3  14  7 18 18 NIX L=1E-6 W=1.18E-04\nM4  16  2 18 18 NIX L=1E-6 W=1.18E-04\nRD1  4 50 1.33E+04\nRD2  6 50 1.33E+04\nRD3 99 14 1.33E+04\nRD4 99 16 1.33E+04\nC1 4  6 6.7E-13\nC2 14 16 6.7E-13\nI1 99  8 3.00E-05\nI2 18 50 3.00E-05\nV1 99  9 2.113E+00\nV2 19 50 1.203E-01\nD1 8  9 DX\nD2 19 18 DX\nEOS 7 1 POLY(4) (73,98) (22,98) (81,98) (83,98) -9.1E-06 0.1 0.1 0.1 0.1\nIOS 1  2 100E-12\nV5 99 3 2.2\nD5 1 3 DX\nD6 50 1 DX\nV6 99 100 2.2\nD7 2 100 DX\nD8 50 2 DX\nCcm1 1 50 35E-12\nCcm2 2 50 35E-12\nCdm 1 2 7.0E-12\nE1  72 98 POLY(2) (1,98) (2,98) 0 5.25E-03 5.25E-03\nR10 72 73 1.89E+02\nR20 73 98 4.8E-01\nC10 72 73 1.00E-06\nEPSY 21 98 POLY(1) (99,50) -2.712E-00 2.4\nRPS1 21 22 1.59E+05\nRPS2 22 98 3.18E-01\nCPS1 21 22 1.00E-06\nVN1 80 98 0\nRN1 80 98  265E-05\nHN  81 98 VN1 6.6E0\nRNHH1 81 183 5.3\nCHH1 183 98 1E-012\nFIBIAS1 1 98 V21 800E-6\nV21 700 98 0\nR28 700 98 .0167\nD38 710 700 DIN\nV22 710 98 0.2\nFIBIAS2 2 98 V23 800E-6\nV23 720 98 0\nR29 720 98 .0167\nD39 730 720 DIN\nV27 730 98 0.2\nEV5 83 98 VALUE = { V(203,98)+V(205,98) }\nR94 204 98 300\nL92 200 210 6.0e-006\nC92 210 204 9e-011\nR93 200 204 5.5E03\nEV4 205 98 204 98 10.5\nEV3 203 98 202 98 5.5\nR92 202 98 200\nL91 200 201 3.0e-005\nC91 201 202 10e-010\nR91 200 202 1E03\nEV1 200 98 81 98 1\nEREF 98  0 POLY(2) (99,0) (50,0) 0 0.5 0.5\nGSY  99 50 POLY(1) (99,50) 805.1E-06 -1.55E-9\nG1 98 30 POLY(2) (4,6) (14,16) 0 7.103E-03 7.103E-03\nR1 30 98 1.00E+06\nRZ 455 31 0.195E+00\nCF 30 31 4.05E-9\nEZ 455 98 (45,98) 1\nV3 32 30 -7.5E-04\nV4 30 33 -4.9E-04\nD3 32 98 DX\nD4 98 33 DX\nM5  45 46 99 99 POX L=3E-6 W=20E-04\nM6  45 47 50 50 NOX L=3E-6 W=40E-04\nEG1 99 46 POLY(1) (98,30) 8.523E-01 1\nEG2 47 50 POLY(1) (30,98) 8.523E-01 1\n.MODEL POX PMOS (LEVEL=2,KP=4.00E-05,VTO=-0.83,LAMBDA=0.047,RD=7)\n.MODEL NOX NMOS (LEVEL=2,KP=4.00E-05,VTO=+0.83,LAMBDA=0.047,RD=38)\n.MODEL PIX PMOS (LEVEL=2,KP=1.50E-05,VTO=-0.5,LAMBDA=0.047)\n.MODEL NIX NMOS (LEVEL=2,KP=4.00E-05,VTO=0.5,LAMBDA=0.022)\n.MODEL DX D(IS=1E-14,RS=0.1)\n.MODEL DIN D(IS=1e-15,KF=3.18E-12)\n.ENDS ADA4522\n.SUBCKT ADA4522_2 p1 p2 p3 p4 p5 p6 p7 p8\nXA p3 p2 p8 p4 p1 ADA4522\nXB p5 p6 p8 p4 p7 ADA4522\n.ENDS ADA4522_2\n"
+            }
+          },
+          "footprint": "SOIC-8_P1.27",
+          "kind": "Custom",
+          "pos": [
+            52,
+            14
+          ],
+          "refdes": "U4",
+          "rot": 0,
+          "value": "ADA4522-2"
+        },
+        {
+          "custom": null,
+          "footprint": "R_0805",
+          "kind": "Resistor",
+          "pos": [
+            66,
+            8
+          ],
+          "refdes": "R21",
+          "rot": 0,
+          "value": "10k"
+        },
+        {
+          "custom": null,
+          "footprint": "R_0805",
+          "kind": "Resistor",
+          "pos": [
+            10,
+            28
+          ],
+          "refdes": "R22",
+          "rot": 0,
+          "value": "12k"
+        },
+        {
+          "custom": null,
+          "footprint": "C_0805",
+          "kind": "Capacitor",
+          "pos": [
+            22,
+            28
+          ],
+          "refdes": "C13",
+          "rot": 0,
+          "value": "10u"
+        },
+        {
+          "custom": null,
+          "footprint": "C_0805",
+          "kind": "Capacitor",
+          "pos": [
+            34,
+            28
+          ],
+          "refdes": "C14",
+          "rot": 0,
+          "value": "100n"
+        },
+        {
+          "custom": null,
+          "footprint": "R_0805",
+          "kind": "Resistor",
+          "pos": [
+            46,
+            28
+          ],
+          "refdes": "R23",
+          "rot": 0,
+          "value": "47"
+        },
+        {
+          "custom": null,
+          "footprint": "C_0805",
+          "kind": "Capacitor",
+          "pos": [
+            58,
+            28
+          ],
+          "refdes": "C15",
+          "rot": 0,
+          "value": "1u"
+        },
+        {
+          "custom": {
+            "name": "ULN2803A",
+            "pins": [
+              {
+                "name": "IN1",
+                "number": "1",
+                "side": "left"
+              },
+              {
+                "name": "IN2",
+                "number": "2",
+                "side": "left"
+              },
+              {
+                "name": "IN3",
+                "number": "3",
+                "side": "left"
+              },
+              {
+                "name": "IN4",
+                "number": "4",
+                "side": "left"
+              },
+              {
+                "name": "IN5",
+                "number": "5",
+                "side": "left"
+              },
+              {
+                "name": "IN6",
+                "number": "6",
+                "side": "left"
+              },
+              {
+                "name": "IN7",
+                "number": "7",
+                "side": "left"
+              },
+              {
+                "name": "IN8",
+                "number": "8",
+                "side": "left"
+              },
+              {
+                "name": "GND",
+                "number": "9",
+                "side": "bottom"
+              },
+              {
+                "name": "COM",
+                "number": "10",
+                "side": "top"
+              },
+              {
+                "name": "OUT1",
+                "number": "18",
+                "side": "right"
+              },
+              {
+                "name": "OUT2",
+                "number": "17",
+                "side": "right"
+              },
+              {
+                "name": "OUT3",
+                "number": "16",
+                "side": "right"
+              },
+              {
+                "name": "OUT4",
+                "number": "15",
+                "side": "right"
+              },
+              {
+                "name": "OUT5",
+                "number": "14",
+                "side": "right"
+              },
+              {
+                "name": "OUT6",
+                "number": "13",
+                "side": "right"
+              },
+              {
+                "name": "OUT7",
+                "number": "12",
+                "side": "right"
+              },
+              {
+                "name": "OUT8",
+                "number": "11",
+                "side": "right"
+              }
+            ],
+            "prefix": "U",
+            "ratings": {
+              "i_max": 0.5,
+              "rows": [
+                {
+                  "name": "出力電圧 VCE (最大)",
+                  "value": "50V"
+                },
+                {
+                  "condition": "全回路の合計の許容は、パッケージの損失で決まる",
+                  "name": "出力電流 (1回路、連続)",
+                  "value": "500mA"
+                },
+                {
+                  "name": "入力電圧 (最大)",
+                  "value": "30V"
+                },
+                {
+                  "name": "クランプダイオードの耐圧",
+                  "value": "50V"
+                },
+                {
+                  "condition": "IC = 100mA / 200mA / 350mA、入力電流 = 250µA / 350µA / 500µA",
+                  "name": "出力の飽和電圧 VCE(sat) (代表値)",
+                  "value": "0.9V / 1.1V / 1.3V"
+                }
+              ],
+              "v_max": 50.0
+            },
+            "sim": {
+              "element": "",
+              "kind": "subckt",
+              "limits": [
+                "TI のモデルではなく、データシートの値に合わせた自作の等価モデルです。出力の飽和電圧 (IC=100mA で 約0.9V、200mA で 約1.1V、350mA で 約1.3V) と、クランプダイオードの順方向電圧 (350mA で 約1.7V) に合わせてあります。入力電流は、3.85V のとき約 0.85mA です (データシートの代表値は 約0.93mA)。",
+                "スイッチング時間 (ターンオン・ターンオフの遅れ) と、出力の漏れ電流 (最大 50µA)、温度による変化は扱いません。",
+                "8回路を同時に使ったときの発熱 (パッケージの許容損失) は扱いません。全部の回路で 350mA を流すと、パッケージの許容損失を超えます。データシートの「許容損失」と「同時に流せる電流」で確かめます。",
+                "クランプダイオードは COM の電圧 (リレーなどの電源) へつなぐと、誘導性の負荷が切れるときの逆起電力を吸収します。COM を未接続にすると、クランプは働きません。"
+              ],
+              "name": "ULN2803A",
+              "params": {},
+              "pins": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "18",
+                "17",
+                "16",
+                "15",
+                "14",
+                "13",
+                "12",
+                "11"
+              ],
+              "text": "* ULN2803A: 8 Darlington drivers (one channel = ULN2803A_CH, used 8 times).\n* One channel: input 2.7k -> Q1 -> Q2 (Darlington), 7.2k and 3k turn-off resistors,\n* and the clamp diode from the output to COM. Pin order: IN1..IN8, GND, COM, OUT1..OUT8.\n.subckt ULN2803A i1 i2 i3 i4 i5 i6 i7 i8 gnd com o1 o2 o3 o4 o5 o6 o7 o8\nX1 i1 o1 gnd com ULN2803A_CH\nX2 i2 o2 gnd com ULN2803A_CH\nX3 i3 o3 gnd com ULN2803A_CH\nX4 i4 o4 gnd com ULN2803A_CH\nX5 i5 o5 gnd com ULN2803A_CH\nX6 i6 o6 gnd com ULN2803A_CH\nX7 i7 o7 gnd com ULN2803A_CH\nX8 i8 o8 gnd com ULN2803A_CH\n.ends\n.subckt ULN2803A_CH in out gnd com\nRin in b1 2.7k\nRb1 b1 gnd 7.2k\nQ1 out b1 e1 QDRV1\nRb2 e1 gnd 3k\nQ2 out e1 gnd QDRV2\nDc out com DCLAMP\n.model QDRV1 NPN(IS=1e-12 BF=150 RB=10 RC=1 RE=0.5 VAF=80)\n.model QDRV2 NPN(IS=2e-12 BF=100 RB=2 RC=0.3 RE=1.7 VAF=80)\n.model DCLAMP D(IS=1e-12 N=1.8 RS=1.3)\n.ends"
+            }
+          },
+          "footprint": "DIP-18_W7.62",
+          "kind": "Custom",
+          "pos": [
+            12,
+            46
+          ],
+          "refdes": "U5",
+          "rot": 0,
+          "value": "ULN2803A"
+        },
+        {
+          "custom": {
+            "name": "ULN2803A",
+            "pins": [
+              {
+                "name": "IN1",
+                "number": "1",
+                "side": "left"
+              },
+              {
+                "name": "IN2",
+                "number": "2",
+                "side": "left"
+              },
+              {
+                "name": "IN3",
+                "number": "3",
+                "side": "left"
+              },
+              {
+                "name": "IN4",
+                "number": "4",
+                "side": "left"
+              },
+              {
+                "name": "IN5",
+                "number": "5",
+                "side": "left"
+              },
+              {
+                "name": "IN6",
+                "number": "6",
+                "side": "left"
+              },
+              {
+                "name": "IN7",
+                "number": "7",
+                "side": "left"
+              },
+              {
+                "name": "IN8",
+                "number": "8",
+                "side": "left"
+              },
+              {
+                "name": "GND",
+                "number": "9",
+                "side": "bottom"
+              },
+              {
+                "name": "COM",
+                "number": "10",
+                "side": "top"
+              },
+              {
+                "name": "OUT1",
+                "number": "18",
+                "side": "right"
+              },
+              {
+                "name": "OUT2",
+                "number": "17",
+                "side": "right"
+              },
+              {
+                "name": "OUT3",
+                "number": "16",
+                "side": "right"
+              },
+              {
+                "name": "OUT4",
+                "number": "15",
+                "side": "right"
+              },
+              {
+                "name": "OUT5",
+                "number": "14",
+                "side": "right"
+              },
+              {
+                "name": "OUT6",
+                "number": "13",
+                "side": "right"
+              },
+              {
+                "name": "OUT7",
+                "number": "12",
+                "side": "right"
+              },
+              {
+                "name": "OUT8",
+                "number": "11",
+                "side": "right"
+              }
+            ],
+            "prefix": "U",
+            "ratings": {
+              "i_max": 0.5,
+              "rows": [
+                {
+                  "name": "出力電圧 VCE (最大)",
+                  "value": "50V"
+                },
+                {
+                  "condition": "全回路の合計の許容は、パッケージの損失で決まる",
+                  "name": "出力電流 (1回路、連続)",
+                  "value": "500mA"
+                },
+                {
+                  "name": "入力電圧 (最大)",
+                  "value": "30V"
+                },
+                {
+                  "name": "クランプダイオードの耐圧",
+                  "value": "50V"
+                },
+                {
+                  "condition": "IC = 100mA / 200mA / 350mA、入力電流 = 250µA / 350µA / 500µA",
+                  "name": "出力の飽和電圧 VCE(sat) (代表値)",
+                  "value": "0.9V / 1.1V / 1.3V"
+                }
+              ],
+              "v_max": 50.0
+            },
+            "sim": {
+              "element": "",
+              "kind": "subckt",
+              "limits": [
+                "TI のモデルではなく、データシートの値に合わせた自作の等価モデルです。出力の飽和電圧 (IC=100mA で 約0.9V、200mA で 約1.1V、350mA で 約1.3V) と、クランプダイオードの順方向電圧 (350mA で 約1.7V) に合わせてあります。入力電流は、3.85V のとき約 0.85mA です (データシートの代表値は 約0.93mA)。",
+                "スイッチング時間 (ターンオン・ターンオフの遅れ) と、出力の漏れ電流 (最大 50µA)、温度による変化は扱いません。",
+                "8回路を同時に使ったときの発熱 (パッケージの許容損失) は扱いません。全部の回路で 350mA を流すと、パッケージの許容損失を超えます。データシートの「許容損失」と「同時に流せる電流」で確かめます。",
+                "クランプダイオードは COM の電圧 (リレーなどの電源) へつなぐと、誘導性の負荷が切れるときの逆起電力を吸収します。COM を未接続にすると、クランプは働きません。"
+              ],
+              "name": "ULN2803A",
+              "params": {},
+              "pins": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "18",
+                "17",
+                "16",
+                "15",
+                "14",
+                "13",
+                "12",
+                "11"
+              ],
+              "text": "* ULN2803A: 8 Darlington drivers (one channel = ULN2803A_CH, used 8 times).\n* One channel: input 2.7k -> Q1 -> Q2 (Darlington), 7.2k and 3k turn-off resistors,\n* and the clamp diode from the output to COM. Pin order: IN1..IN8, GND, COM, OUT1..OUT8.\n.subckt ULN2803A i1 i2 i3 i4 i5 i6 i7 i8 gnd com o1 o2 o3 o4 o5 o6 o7 o8\nX1 i1 o1 gnd com ULN2803A_CH\nX2 i2 o2 gnd com ULN2803A_CH\nX3 i3 o3 gnd com ULN2803A_CH\nX4 i4 o4 gnd com ULN2803A_CH\nX5 i5 o5 gnd com ULN2803A_CH\nX6 i6 o6 gnd com ULN2803A_CH\nX7 i7 o7 gnd com ULN2803A_CH\nX8 i8 o8 gnd com ULN2803A_CH\n.ends\n.subckt ULN2803A_CH in out gnd com\nRin in b1 2.7k\nRb1 b1 gnd 7.2k\nQ1 out b1 e1 QDRV1\nRb2 e1 gnd 3k\nQ2 out e1 gnd QDRV2\nDc out com DCLAMP\n.model QDRV1 NPN(IS=1e-12 BF=150 RB=10 RC=1 RE=0.5 VAF=80)\n.model QDRV2 NPN(IS=2e-12 BF=100 RB=2 RC=0.3 RE=1.7 VAF=80)\n.model DCLAMP D(IS=1e-12 N=1.8 RS=1.3)\n.ends"
+            }
+          },
+          "footprint": "DIP-18_W7.62",
+          "kind": "Custom",
+          "pos": [
+            28,
+            46
+          ],
+          "refdes": "U6",
+          "rot": 0,
+          "value": "ULN2803A"
+        },
+        {
+          "custom": null,
+          "footprint": "PinHeader_1x28",
+          "kind": {
+            "Header": 28
+          },
+          "pin_names": [
+            "5V",
+            "3V3",
+            "GND",
+            "D50",
+            "D51",
+            "D52",
+            "D53",
+            "D2",
+            "D4",
+            "D5",
+            "D20",
+            "D21",
+            "D22",
+            "D23",
+            "D24",
+            "D25",
+            "D26",
+            "D27",
+            "D28",
+            "D29",
+            "D30",
+            "D31",
+            "D32",
+            "D33",
+            "D34",
+            "D35",
+            "D36",
+            "D37"
+          ],
+          "pos": [
+            38,
+            36
+          ],
+          "refdes": "J3",
+          "rot": 0,
+          "value": "Conn"
+        },
+        {
+          "custom": null,
+          "footprint": "PinHeader_1x4",
+          "kind": {
+            "Header": 4
+          },
+          "pin_names": [
+            "GND",
+            "VCC",
+            "SCL",
+            "SDA"
+          ],
+          "pos": [
+            46,
+            36
+          ],
+          "refdes": "J2",
+          "rot": 0,
+          "value": "Conn"
+        },
+        {
+          "custom": null,
+          "footprint": "",
+          "kind": "Ground",
+          "pos": [
+            56,
+            36
+          ],
+          "refdes": "#PWR01",
+          "rot": 0,
+          "value": "GND"
+        }
+      ],
+      "labels": [
+        {
+          "pos": [
+            40,
+            36
+          ],
+          "text": "5V"
+        },
+        {
+          "pos": [
+            8,
+            9
+          ],
+          "text": "5V"
+        },
+        {
+          "pos": [
+            8,
+            11
+          ],
+          "text": "5V"
+        },
+        {
+          "pos": [
+            24,
+            8
+          ],
+          "text": "5V"
+        },
+        {
+          "pos": [
+            12,
+            36
+          ],
+          "text": "5V"
+        },
+        {
+          "pos": [
+            28,
+            36
+          ],
+          "text": "5V"
+        },
+        {
+          "pos": [
+            48,
+            38
+          ],
+          "text": "5V"
+        },
+        {
+          "pos": [
+            16,
+            9
+          ],
+          "text": "AVDD"
+        },
+        {
+          "pos": [
+            36,
+            8
+          ],
+          "text": "AVDD"
+        },
+        {
+          "pos": [
+            64,
+            8
+          ],
+          "text": "AVDD"
+        },
+        {
+          "pos": [
+            52,
+            8
+          ],
+          "text": "AVDD"
+        },
+        {
+          "pos": [
+            32,
+            28
+          ],
+          "text": "AVDD"
+        },
+        {
+          "pos": [
+            40,
+            38
+          ],
+          "text": "3V3"
+        },
+        {
+          "pos": [
+            40,
+            40
+          ],
+          "text": "GND"
+        },
+        {
+          "pos": [
+            12,
+            14
+          ],
+          "text": "GND"
+        },
+        {
+          "pos": [
+            28,
+            8
+          ],
+          "text": "GND"
+        },
+        {
+          "pos": [
+            40,
+            8
+          ],
+          "text": "GND"
+        },
+        {
+          "pos": [
+            12,
+            28
+          ],
+          "text": "GND"
+        },
+        {
+          "pos": [
+            24,
+            28
+          ],
+          "text": "GND"
+        },
+        {
+          "pos": [
+            52,
+            20
+          ],
+          "text": "GND"
+        },
+        {
+          "pos": [
+            36,
+            28
+          ],
+          "text": "GND"
+        },
+        {
+          "pos": [
+            60,
+            28
+          ],
+          "text": "GND"
+        },
+        {
+          "pos": [
+            12,
+            56
+          ],
+          "text": "GND"
+        },
+        {
+          "pos": [
+            28,
+            56
+          ],
+          "text": "GND"
+        },
+        {
+          "pos": [
+            48,
+            36
+          ],
+          "text": "GND"
+        },
+        {
+          "pos": [
+            68,
+            8
+          ],
+          "text": "VSET"
+        },
+        {
+          "pos": [
+            8,
+            28
+          ],
+          "text": "VSET"
+        },
+        {
+          "pos": [
+            20,
+            28
+          ],
+          "text": "VSET"
+        },
+        {
+          "pos": [
+            48,
+            13
+          ],
+          "text": "VSET"
+        },
+        {
+          "pos": [
+            48,
+            15
+          ],
+          "text": "VSET"
+        },
+        {
+          "pos": [
+            56,
+            13
+          ],
+          "text": "VBUF"
+        },
+        {
+          "pos": [
+            48,
+            11
+          ],
+          "text": "VBUF"
+        },
+        {
+          "pos": [
+            44,
+            28
+          ],
+          "text": "VBUF"
+        },
+        {
+          "pos": [
+            48,
+            28
+          ],
+          "text": "VCOM"
+        },
+        {
+          "pos": [
+            56,
+            28
+          ],
+          "text": "VCOM"
+        },
+        {
+          "pos": [
+            56,
+            15
+          ],
+          "text": "VSPARE"
+        },
+        {
+          "pos": [
+            48,
+            17
+          ],
+          "text": "VSPARE"
+        },
+        {
+          "pos": [
+            40,
+            42
+          ],
+          "text": "MISO"
+        },
+        {
+          "pos": [
+            40,
+            44
+          ],
+          "text": "MOSI"
+        },
+        {
+          "pos": [
+            40,
+            46
+          ],
+          "text": "SCLK"
+        },
+        {
+          "pos": [
+            40,
+            48
+          ],
+          "text": "CS"
+        },
+        {
+          "pos": [
+            40,
+            50
+          ],
+          "text": "DRDY"
+        },
+        {
+          "pos": [
+            40,
+            52
+          ],
+          "text": "START"
+        },
+        {
+          "pos": [
+            40,
+            54
+          ],
+          "text": "RESET"
+        },
+        {
+          "pos": [
+            40,
+            56
+          ],
+          "text": "SDA"
+        },
+        {
+          "pos": [
+            48,
+            42
+          ],
+          "text": "SDA"
+        },
+        {
+          "pos": [
+            40,
+            58
+          ],
+          "text": "SCL"
+        },
+        {
+          "pos": [
+            48,
+            40
+          ],
+          "text": "SCL"
+        },
+        {
+          "pos": [
+            40,
+            60
+          ],
+          "text": "D22"
+        },
+        {
+          "pos": [
+            8,
+            39
+          ],
+          "text": "D22"
+        },
+        {
+          "pos": [
+            40,
+            62
+          ],
+          "text": "D23"
+        },
+        {
+          "pos": [
+            8,
+            41
+          ],
+          "text": "D23"
+        },
+        {
+          "pos": [
+            40,
+            64
+          ],
+          "text": "D24"
+        },
+        {
+          "pos": [
+            8,
+            43
+          ],
+          "text": "D24"
+        },
+        {
+          "pos": [
+            40,
+            66
+          ],
+          "text": "D25"
+        },
+        {
+          "pos": [
+            8,
+            45
+          ],
+          "text": "D25"
+        },
+        {
+          "pos": [
+            40,
+            68
+          ],
+          "text": "D26"
+        },
+        {
+          "pos": [
+            8,
+            47
+          ],
+          "text": "D26"
+        },
+        {
+          "pos": [
+            40,
+            70
+          ],
+          "text": "D27"
+        },
+        {
+          "pos": [
+            8,
+            49
+          ],
+          "text": "D27"
+        },
+        {
+          "pos": [
+            40,
+            72
+          ],
+          "text": "D28"
+        },
+        {
+          "pos": [
+            8,
+            51
+          ],
+          "text": "D28"
+        },
+        {
+          "pos": [
+            40,
+            74
+          ],
+          "text": "D29"
+        },
+        {
+          "pos": [
+            8,
+            53
+          ],
+          "text": "D29"
+        },
+        {
+          "pos": [
+            40,
+            76
+          ],
+          "text": "D30"
+        },
+        {
+          "pos": [
+            24,
+            39
+          ],
+          "text": "D30"
+        },
+        {
+          "pos": [
+            40,
+            78
+          ],
+          "text": "D31"
+        },
+        {
+          "pos": [
+            24,
+            41
+          ],
+          "text": "D31"
+        },
+        {
+          "pos": [
+            40,
+            80
+          ],
+          "text": "D32"
+        },
+        {
+          "pos": [
+            24,
+            43
+          ],
+          "text": "D32"
+        },
+        {
+          "pos": [
+            40,
+            82
+          ],
+          "text": "D33"
+        },
+        {
+          "pos": [
+            24,
+            45
+          ],
+          "text": "D33"
+        },
+        {
+          "pos": [
+            40,
+            84
+          ],
+          "text": "D34"
+        },
+        {
+          "pos": [
+            24,
+            47
+          ],
+          "text": "D34"
+        },
+        {
+          "pos": [
+            40,
+            86
+          ],
+          "text": "D35"
+        },
+        {
+          "pos": [
+            24,
+            49
+          ],
+          "text": "D35"
+        },
+        {
+          "pos": [
+            40,
+            88
+          ],
+          "text": "D36"
+        },
+        {
+          "pos": [
+            24,
+            51
+          ],
+          "text": "D36"
+        },
+        {
+          "pos": [
+            40,
+            90
+          ],
+          "text": "D37"
+        },
+        {
+          "pos": [
+            24,
+            53
+          ],
+          "text": "D37"
+        },
+        {
+          "pos": [
+            16,
+            39
+          ],
+          "text": "K1S"
+        },
+        {
+          "pos": [
+            16,
+            41
+          ],
+          "text": "K1R"
+        },
+        {
+          "pos": [
+            16,
+            43
+          ],
+          "text": "K2S"
+        },
+        {
+          "pos": [
+            16,
+            45
+          ],
+          "text": "K2R"
+        },
+        {
+          "pos": [
+            16,
+            47
+          ],
+          "text": "K3S"
+        },
+        {
+          "pos": [
+            16,
+            49
+          ],
+          "text": "K3R"
+        },
+        {
+          "pos": [
+            16,
+            51
+          ],
+          "text": "K4S"
+        },
+        {
+          "pos": [
+            16,
+            53
+          ],
+          "text": "K4R"
+        },
+        {
+          "pos": [
+            32,
+            39
+          ],
+          "text": "K5S"
+        },
+        {
+          "pos": [
+            32,
+            41
+          ],
+          "text": "K5R"
+        },
+        {
+          "pos": [
+            32,
+            43
+          ],
+          "text": "K6S"
+        },
+        {
+          "pos": [
+            32,
+            45
+          ],
+          "text": "K6R"
+        },
+        {
+          "pos": [
+            32,
+            47
+          ],
+          "text": "K7S"
+        },
+        {
+          "pos": [
+            32,
+            49
+          ],
+          "text": "K7R"
+        },
+        {
+          "pos": [
+            32,
+            51
+          ],
+          "text": "K8S"
+        },
+        {
+          "pos": [
+            32,
+            53
+          ],
+          "text": "K8R"
+        }
+      ],
+      "name": "電源・制御",
+      "wires": []
+    }
+  ],
+  "wires": []
+}

@@ -1,0 +1,217 @@
+# DMM v1 stage B (perfboard, glass epoxy): the whole analog part.
+# Design notes and numbers: dmm/stageB.md.  Build: ccad dmm/stageB.ccad
+#
+# Sheet 1 測定:  ADS124S08, ADR4525, the analog input map
+# Sheet 2 入力:  terminals, 10 Mohm divider, direct path, ohms reference resistors, relays K1..K8
+# Sheet 3 電源・制御: AVDD LDO, VCOM (mid-supply) buffer, relay drivers, Arduino Mega, OLED
+#
+# The measurement common (LO terminal) is VCOM, about 0.545 x AVDD = 2.45 V, so inputs can swing both
+# ways and the PGA stays inside its common-mode range. The PC side must go through a USB isolator.
+new
+
+add ADS124S08_TQFP as=U1
+add ADR4525 as=U2
+add C 100n as=C1
+add C 100n as=C2
+add C 100n as=C3
+add C 1u as=C4
+add C 1u as=C5
+add C 100n as=C6
+add C 1u as=C7
+
+# Supplies: IOVDD 5 V (Mega I/O), DVDD 3.3 V (Mega), AVDD 4.5 V from the LDO on sheet 3
+net 5V U1.IOVDD C1.1
+net 3V3 U1.DVDD C2.1
+net AVDD U1.AVDD C3.1 C4.1 U2.VIN C6.1 U1.REFP1/AIN6
+net GND U1.AVSS U1.AVSS-SW U1.DGND U1.REFCOM U1.CLK U1.REFN0 C1.2 C2.2 C3.2 C4.2 C5.2 C6.2 C7.2 U2.GND
+
+# References: internal REFOUT (on AIN9) and ADR4525 (on AIN8 and REFP0), as in stage A
+net REFOUT U1.REFOUT C5.1 U1.GPIO1/AIN9
+net ADRREF U2.VOUT C7.1 U1.GPIO0/AIN8 U1.REFP0
+
+# Analog input map (PGA bypassed for ohms, enabled for volts)
+net DIRECT U1.AIN0
+net DIV_A U1.AIN1
+net DIV_B U1.AIN2
+net VCOM U1.AIN3
+net HI_S_IN U1.AIN4
+net LO_S_IN U1.AIN5
+# AIN6 = AVDD at the tops of the reference resistors (net AVDD above), AIN7 = their bottom, sensed
+net RBOT_S U1.REFN1/AIN7
+
+# SPI to the Mega (sheet 3)
+net MISO U1.DOUT/DRDY
+net MOSI U1.DIN
+net SCLK U1.SCLK
+net CS U1.CS
+net DRDY U1.DRDY
+net START U1.START/SYNC
+net RESET U1.RESET
+
+nc U1.AINCOM U1.GPIO2/AIN10 U1.GPIO3/AIN11 U1.NC U2.TP
+
+# ---------------------------------------------------------------- input
+sheet add 入力
+
+add HEADER4 as=J1
+# 10 Mohm divider: HI -> 10M -> DIV_A -> 1M -> DIV_B -> 100k -> VCOM (ratios ~1/10.09 and ~1/111, calibrated)
+add R 10M as=R1
+add R 1M as=R2
+add R 100k as=R3
+# Direct path for the 100 mV and 1 V ranges, and the sense inputs, with series resistors and clamps
+add R 100k as=R4
+add R 10k as=R5
+add R 10k as=R6
+add BAV199 as=D1
+add BAV199 as=D2
+add BAV199 as=D3
+# Ohms reference resistors: AVDD -> Rref -> (relay) -> HI -> Rx -> LO = VCOM
+add R 1k as=R11
+add R 10k as=R12
+add R 100k as=R13
+add R 1M as=R14
+add R 10M as=R15
+add TQ2-L2-5V as=K1
+add TQ2-L2-5V as=K2
+add TQ2-L2-5V as=K3
+add TQ2-L2-5V as=K4
+add TQ2-L2-5V as=K5
+add TQ2-L2-5V as=K6
+add TQ2-L2-5V as=K7
+add TQ2-L2-5V as=K8
+
+net HI J1.1 K6.COM1 K7.COM1 K8.COM1 K1.SET1 K2.SET1 K3.SET1 K4.SET1 K5.SET1
+net VCOM J1.2 K8.COM2 R3.2
+net HI_S J1.3 K8.SET1 R5.1
+net LO_S J1.4 K8.SET2 R6.1
+
+# K6: divider on (volts 10 V / 30 V ranges)
+net DIV_TOP K6.SET1 R1.1
+net DIV_A R1.2 R2.1
+net DIV_B R2.2 R3.1
+# K7: direct path on (volts 100 mV / 1 V ranges)
+net DIR_IN K7.SET1 R4.1
+net DIRECT R4.2 D1.MID
+net HI_S_IN R5.2 D2.MID
+net LO_S_IN R6.2 D3.MID
+net AVDD D1.K D2.K D3.K R11.1 R12.1 R13.1 R14.1 R15.1
+net GND D1.A D2.A D3.A
+
+# K1..K5: one reference resistor at a time. Pole 1 carries the current to HI, pole 2 brings the
+# bottom of the same resistor to AIN7 on its own wire (Kelvin), so the contact resistance is not measured.
+net RB1 R11.2 K1.COM1 K1.COM2
+net RB2 R12.2 K2.COM1 K2.COM2
+net RB3 R13.2 K3.COM1 K3.COM2
+net RB4 R14.2 K4.COM1 K4.COM2
+net RB5 R15.2 K5.COM1 K5.COM2
+net RBOT_S K1.SET2 K2.SET2 K3.SET2 K4.SET2 K5.SET2
+
+# Coils: + ends to 5 V, - ends to the drivers on sheet 3 (net K<n>S = set, K<n>R = reset)
+net 5V K1.SET+ K1.RST+ K2.SET+ K2.RST+ K3.SET+ K3.RST+ K4.SET+ K4.RST+ K5.SET+ K5.RST+ K6.SET+ K6.RST+ K7.SET+ K7.RST+ K8.SET+ K8.RST+
+net K1S K1.SET-
+net K1R K1.RST-
+net K2S K2.SET-
+net K2R K2.RST-
+net K3S K3.SET-
+net K3R K3.RST-
+net K4S K4.SET-
+net K4R K4.RST-
+net K5S K5.SET-
+net K5R K5.RST-
+net K6S K6.SET-
+net K6R K6.RST-
+net K7S K7.SET-
+net K7R K7.RST-
+net K8S K8.SET-
+net K8R K8.RST-
+
+nc K1.RST1 K1.RST2 K2.RST1 K2.RST2 K3.RST1 K3.RST2 K4.RST1 K4.RST2 K5.RST1 K5.RST2
+nc K6.COM2 K6.SET2 K6.RST1 K6.RST2 K7.COM2 K7.SET2 K7.RST1 K7.RST2 K8.RST1 K8.RST2
+
+pinnames J1 HI,LO,HI_S,LO_S
+
+# ---------------------------------------------------------------- power and control
+sheet add 電源・制御
+
+add LP5907-4.5 as=U3
+add C 1u as=C11
+add C 1u as=C12
+add ADA4522-2 as=U4
+add R 10k as=R21
+add R 12k as=R22
+add C 10u as=C13
+add C 100n as=C14
+add R 47 as=R23
+add C 1u as=C15
+add ULN2803A as=U5
+add ULN2803A as=U6
+add HEADER28 as=J3
+add HEADER4 as=J2
+
+# AVDD = 4.5 V low-noise LDO from the Mega's 5 V (dropout 50 mV at 100 mA)
+net 5V J3.1 U3.IN U3.EN C11.1 U5.COM U6.COM J2.2
+net AVDD U3.OUT C12.1 R21.1 U4.V+ C14.1
+net 3V3 J3.2
+net GND J3.3 U3.GND C11.2 C12.2 R22.2 C13.2 U4.V- C14.2 C15.2 U5.GND U6.GND J2.1
+nc U3.NC
+
+# VCOM = AVDD x 12k / 22k = 2.45 V, filtered by C13 and buffered by U4A. U4B is a spare follower.
+net VSET R21.2 R22.1 C13.1 U4.+INA U4.+INB
+net VBUF U4.OUTA U4.-INA R23.1
+net VCOM R23.2 C15.1
+net VSPARE U4.OUTB U4.-INB
+
+# SPI and control lines to the Mega (D50-D53, D2, D4, D5)
+net MISO J3.4
+net MOSI J3.5
+net SCLK J3.6
+net CS J3.7
+net DRDY J3.8
+net START J3.9
+net RESET J3.10
+# OLED on I2C (D20, D21)
+net SDA J3.11 J2.4
+net SCL J3.12 J2.3
+
+# Relay drivers: Mega D22..D37 -> ULN2803A inputs; outputs pull the coil - ends low; COM = 5 V (flyback diodes)
+net D22 J3.13 U5.IN1
+net D23 J3.14 U5.IN2
+net D24 J3.15 U5.IN3
+net D25 J3.16 U5.IN4
+net D26 J3.17 U5.IN5
+net D27 J3.18 U5.IN6
+net D28 J3.19 U5.IN7
+net D29 J3.20 U5.IN8
+net D30 J3.21 U6.IN1
+net D31 J3.22 U6.IN2
+net D32 J3.23 U6.IN3
+net D33 J3.24 U6.IN4
+net D34 J3.25 U6.IN5
+net D35 J3.26 U6.IN6
+net D36 J3.27 U6.IN7
+net D37 J3.28 U6.IN8
+net K1S U5.OUT1
+net K1R U5.OUT2
+net K2S U5.OUT3
+net K2R U5.OUT4
+net K3S U5.OUT5
+net K3R U5.OUT6
+net K4S U5.OUT7
+net K4R U5.OUT8
+net K5S U6.OUT1
+net K5R U6.OUT2
+net K6S U6.OUT3
+net K6R U6.OUT4
+net K7S U6.OUT5
+net K7R U6.OUT6
+net K8S U6.OUT7
+net K8R U6.OUT8
+
+pinnames J2 GND,VCC,SCL,SDA
+pinnames J3 5V,3V3,GND,D50,D51,D52,D53,D2,D4,D5,D20,D21,D22,D23,D24,D25,D26,D27,D28,D29,D30,D31,D32,D33,D34,D35,D36,D37
+
+sheet use 1
+sheet name 測定
+sheet tidy all
+erc
+save dmm/stageB.schjson

@@ -1,0 +1,1088 @@
+{
+  "components": [
+    {
+      "custom": {
+        "name": "ADS124S08_TQFP",
+        "pins": [
+          {
+            "name": "AIN0",
+            "number": "7",
+            "side": "left"
+          },
+          {
+            "name": "AIN1",
+            "number": "6",
+            "side": "left"
+          },
+          {
+            "name": "AIN2",
+            "number": "5",
+            "side": "left"
+          },
+          {
+            "name": "AIN3",
+            "number": "4",
+            "side": "left"
+          },
+          {
+            "name": "AIN4",
+            "number": "3",
+            "side": "left"
+          },
+          {
+            "name": "AIN5",
+            "number": "2",
+            "side": "left"
+          },
+          {
+            "name": "AINCOM",
+            "number": "1",
+            "side": "left"
+          },
+          {
+            "name": "REFP1/AIN6",
+            "number": "32",
+            "side": "left"
+          },
+          {
+            "name": "REFN1/AIN7",
+            "number": "31",
+            "side": "left"
+          },
+          {
+            "name": "REFP0",
+            "number": "30",
+            "side": "left"
+          },
+          {
+            "name": "REFN0",
+            "number": "29",
+            "side": "left"
+          },
+          {
+            "name": "CS",
+            "number": "9",
+            "side": "right"
+          },
+          {
+            "name": "SCLK",
+            "number": "11",
+            "side": "right"
+          },
+          {
+            "name": "DIN",
+            "number": "10",
+            "side": "right"
+          },
+          {
+            "name": "DOUT/DRDY",
+            "number": "12",
+            "side": "right"
+          },
+          {
+            "name": "DRDY",
+            "number": "13",
+            "side": "right"
+          },
+          {
+            "name": "START/SYNC",
+            "number": "8",
+            "side": "right"
+          },
+          {
+            "name": "RESET",
+            "number": "18",
+            "side": "right"
+          },
+          {
+            "name": "CLK",
+            "number": "17",
+            "side": "right"
+          },
+          {
+            "name": "GPIO0/AIN8",
+            "number": "22",
+            "side": "right"
+          },
+          {
+            "name": "GPIO1/AIN9",
+            "number": "21",
+            "side": "right"
+          },
+          {
+            "name": "GPIO2/AIN10",
+            "number": "20",
+            "side": "right"
+          },
+          {
+            "name": "GPIO3/AIN11",
+            "number": "19",
+            "side": "right"
+          },
+          {
+            "name": "AVDD",
+            "number": "26",
+            "side": "top"
+          },
+          {
+            "name": "DVDD",
+            "number": "16",
+            "side": "top"
+          },
+          {
+            "name": "IOVDD",
+            "number": "15",
+            "side": "top"
+          },
+          {
+            "name": "AVSS",
+            "number": "27",
+            "side": "bottom"
+          },
+          {
+            "name": "AVSS-SW",
+            "number": "28",
+            "side": "bottom"
+          },
+          {
+            "name": "DGND",
+            "number": "14",
+            "side": "bottom"
+          },
+          {
+            "name": "REFCOM",
+            "number": "24",
+            "side": "bottom"
+          },
+          {
+            "name": "REFOUT",
+            "number": "23",
+            "side": "bottom"
+          },
+          {
+            "name": "NC",
+            "number": "25",
+            "side": "bottom"
+          }
+        ],
+        "prefix": "U",
+        "sim": null
+      },
+      "footprint": "TQFP-32_5x5_P0.5",
+      "kind": "Custom",
+      "pos": [
+        16,
+        22
+      ],
+      "refdes": "U1",
+      "rot": 0,
+      "value": "ADS124S08"
+    },
+    {
+      "custom": {
+        "name": "RPi_Pico",
+        "pins": [
+          {
+            "name": "GP0",
+            "number": "1",
+            "side": "left"
+          },
+          {
+            "name": "GP1",
+            "number": "2",
+            "side": "left"
+          },
+          {
+            "name": "GND",
+            "number": "3",
+            "side": "left"
+          },
+          {
+            "name": "GP2",
+            "number": "4",
+            "side": "left"
+          },
+          {
+            "name": "GP3",
+            "number": "5",
+            "side": "left"
+          },
+          {
+            "name": "GP4",
+            "number": "6",
+            "side": "left"
+          },
+          {
+            "name": "GP5",
+            "number": "7",
+            "side": "left"
+          },
+          {
+            "name": "GND",
+            "number": "8",
+            "side": "left"
+          },
+          {
+            "name": "GP6",
+            "number": "9",
+            "side": "left"
+          },
+          {
+            "name": "GP7",
+            "number": "10",
+            "side": "left"
+          },
+          {
+            "name": "GP8",
+            "number": "11",
+            "side": "left"
+          },
+          {
+            "name": "GP9",
+            "number": "12",
+            "side": "left"
+          },
+          {
+            "name": "GND",
+            "number": "13",
+            "side": "left"
+          },
+          {
+            "name": "GP10",
+            "number": "14",
+            "side": "left"
+          },
+          {
+            "name": "GP11",
+            "number": "15",
+            "side": "left"
+          },
+          {
+            "name": "GP12",
+            "number": "16",
+            "side": "left"
+          },
+          {
+            "name": "GP13",
+            "number": "17",
+            "side": "left"
+          },
+          {
+            "name": "GND",
+            "number": "18",
+            "side": "left"
+          },
+          {
+            "name": "GP14",
+            "number": "19",
+            "side": "left"
+          },
+          {
+            "name": "GP15",
+            "number": "20",
+            "side": "left"
+          },
+          {
+            "name": "GP16",
+            "number": "21",
+            "side": "right"
+          },
+          {
+            "name": "GP17",
+            "number": "22",
+            "side": "right"
+          },
+          {
+            "name": "GND",
+            "number": "23",
+            "side": "right"
+          },
+          {
+            "name": "GP18",
+            "number": "24",
+            "side": "right"
+          },
+          {
+            "name": "GP19",
+            "number": "25",
+            "side": "right"
+          },
+          {
+            "name": "GP20",
+            "number": "26",
+            "side": "right"
+          },
+          {
+            "name": "GP21",
+            "number": "27",
+            "side": "right"
+          },
+          {
+            "name": "GND",
+            "number": "28",
+            "side": "right"
+          },
+          {
+            "name": "GP22",
+            "number": "29",
+            "side": "right"
+          },
+          {
+            "name": "RUN",
+            "number": "30",
+            "side": "right"
+          },
+          {
+            "name": "GP26/ADC0",
+            "number": "31",
+            "side": "right"
+          },
+          {
+            "name": "GP27/ADC1",
+            "number": "32",
+            "side": "right"
+          },
+          {
+            "name": "AGND",
+            "number": "33",
+            "side": "right"
+          },
+          {
+            "name": "GP28/ADC2",
+            "number": "34",
+            "side": "right"
+          },
+          {
+            "name": "ADC_VREF",
+            "number": "35",
+            "side": "right"
+          },
+          {
+            "name": "3V3_OUT",
+            "number": "36",
+            "side": "right"
+          },
+          {
+            "name": "3V3_EN",
+            "number": "37",
+            "side": "right"
+          },
+          {
+            "name": "GND",
+            "number": "38",
+            "side": "right"
+          },
+          {
+            "name": "VSYS",
+            "number": "39",
+            "side": "right"
+          },
+          {
+            "name": "VBUS",
+            "number": "40",
+            "side": "right"
+          }
+        ],
+        "prefix": "U",
+        "sim": null
+      },
+      "footprint": "RPi_Pico_THT",
+      "kind": "Custom",
+      "pos": [
+        38,
+        28
+      ],
+      "refdes": "U2",
+      "rot": 0,
+      "value": "Pico"
+    },
+    {
+      "custom": null,
+      "footprint": "PinHeader_1x4",
+      "kind": {
+        "Header": 4
+      },
+      "pin_names": [
+        "GND",
+        "VCC",
+        "SCL",
+        "SDA"
+      ],
+      "pos": [
+        50,
+        8
+      ],
+      "refdes": "J1",
+      "rot": 0,
+      "value": "Conn"
+    },
+    {
+      "custom": null,
+      "footprint": "PinHeader_1x6",
+      "kind": {
+        "Header": 6
+      },
+      "pin_names": [
+        "REFOUT",
+        "AIN0",
+        "AIN1",
+        "AIN2",
+        "AIN3",
+        "GND"
+      ],
+      "pos": [
+        60,
+        8
+      ],
+      "refdes": "J2",
+      "rot": 0,
+      "value": "Conn"
+    },
+    {
+      "custom": null,
+      "footprint": "R_0805",
+      "kind": "Resistor",
+      "pos": [
+        74,
+        8
+      ],
+      "refdes": "R1",
+      "rot": 0,
+      "value": "10"
+    },
+    {
+      "custom": null,
+      "footprint": "C_0805",
+      "kind": "Capacitor",
+      "pos": [
+        88,
+        8
+      ],
+      "refdes": "C1",
+      "rot": 0,
+      "value": "10u"
+    },
+    {
+      "custom": null,
+      "footprint": "C_0805",
+      "kind": "Capacitor",
+      "pos": [
+        102,
+        8
+      ],
+      "refdes": "C2",
+      "rot": 0,
+      "value": "100n"
+    },
+    {
+      "custom": null,
+      "footprint": "C_0805",
+      "kind": "Capacitor",
+      "pos": [
+        10,
+        58
+      ],
+      "refdes": "C3",
+      "rot": 0,
+      "value": "100n"
+    },
+    {
+      "custom": null,
+      "footprint": "C_0805",
+      "kind": "Capacitor",
+      "pos": [
+        24,
+        58
+      ],
+      "refdes": "C4",
+      "rot": 0,
+      "value": "100n"
+    },
+    {
+      "custom": null,
+      "footprint": "C_0805",
+      "kind": "Capacitor",
+      "pos": [
+        38,
+        58
+      ],
+      "refdes": "C5",
+      "rot": 0,
+      "value": "1u"
+    },
+    {
+      "custom": null,
+      "footprint": "",
+      "kind": "Ground",
+      "pos": [
+        34,
+        13
+      ],
+      "refdes": "#PWR01",
+      "rot": 0,
+      "value": "GND"
+    }
+  ],
+  "labels": [
+    {
+      "pos": [
+        42,
+        39
+      ],
+      "text": "3V3"
+    },
+    {
+      "pos": [
+        16,
+        8
+      ],
+      "text": "3V3"
+    },
+    {
+      "pos": [
+        18,
+        8
+      ],
+      "text": "3V3"
+    },
+    {
+      "pos": [
+        8,
+        58
+      ],
+      "text": "3V3"
+    },
+    {
+      "pos": [
+        22,
+        58
+      ],
+      "text": "3V3"
+    },
+    {
+      "pos": [
+        72,
+        8
+      ],
+      "text": "3V3"
+    },
+    {
+      "pos": [
+        52,
+        10
+      ],
+      "text": "3V3"
+    },
+    {
+      "pos": [
+        76,
+        8
+      ],
+      "text": "AVDD"
+    },
+    {
+      "pos": [
+        14,
+        8
+      ],
+      "text": "AVDD"
+    },
+    {
+      "pos": [
+        86,
+        8
+      ],
+      "text": "AVDD"
+    },
+    {
+      "pos": [
+        100,
+        8
+      ],
+      "text": "AVDD"
+    },
+    {
+      "pos": [
+        34,
+        13
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        34,
+        23
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        34,
+        33
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        34,
+        43
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        42,
+        13
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        42,
+        23
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        42,
+        33
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        42,
+        43
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        11,
+        36
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        13,
+        36
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        15,
+        36
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        17,
+        36
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        24,
+        25
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        90,
+        8
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        104,
+        8
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        12,
+        58
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        26,
+        58
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        40,
+        58
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        52,
+        8
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        62,
+        18
+      ],
+      "text": "GND"
+    },
+    {
+      "pos": [
+        19,
+        36
+      ],
+      "text": "REFOUT"
+    },
+    {
+      "pos": [
+        36,
+        58
+      ],
+      "text": "REFOUT"
+    },
+    {
+      "pos": [
+        62,
+        8
+      ],
+      "text": "REFOUT"
+    },
+    {
+      "pos": [
+        24,
+        17
+      ],
+      "text": "MISO"
+    },
+    {
+      "pos": [
+        42,
+        9
+      ],
+      "text": "MISO"
+    },
+    {
+      "pos": [
+        24,
+        11
+      ],
+      "text": "CS"
+    },
+    {
+      "pos": [
+        42,
+        11
+      ],
+      "text": "CS"
+    },
+    {
+      "pos": [
+        24,
+        13
+      ],
+      "text": "SCLK"
+    },
+    {
+      "pos": [
+        42,
+        15
+      ],
+      "text": "SCLK"
+    },
+    {
+      "pos": [
+        24,
+        15
+      ],
+      "text": "MOSI"
+    },
+    {
+      "pos": [
+        42,
+        17
+      ],
+      "text": "MOSI"
+    },
+    {
+      "pos": [
+        24,
+        19
+      ],
+      "text": "DRDY"
+    },
+    {
+      "pos": [
+        42,
+        19
+      ],
+      "text": "DRDY"
+    },
+    {
+      "pos": [
+        24,
+        21
+      ],
+      "text": "START"
+    },
+    {
+      "pos": [
+        42,
+        21
+      ],
+      "text": "START"
+    },
+    {
+      "pos": [
+        24,
+        23
+      ],
+      "text": "RESET"
+    },
+    {
+      "pos": [
+        42,
+        25
+      ],
+      "text": "RESET"
+    },
+    {
+      "pos": [
+        34,
+        19
+      ],
+      "text": "SDA"
+    },
+    {
+      "pos": [
+        52,
+        14
+      ],
+      "text": "SDA"
+    },
+    {
+      "pos": [
+        34,
+        21
+      ],
+      "text": "SCL"
+    },
+    {
+      "pos": [
+        52,
+        12
+      ],
+      "text": "SCL"
+    },
+    {
+      "pos": [
+        8,
+        12
+      ],
+      "text": "AIN0"
+    },
+    {
+      "pos": [
+        62,
+        10
+      ],
+      "text": "AIN0"
+    },
+    {
+      "pos": [
+        8,
+        14
+      ],
+      "text": "AIN1"
+    },
+    {
+      "pos": [
+        62,
+        12
+      ],
+      "text": "AIN1"
+    },
+    {
+      "pos": [
+        8,
+        16
+      ],
+      "text": "AIN2"
+    },
+    {
+      "pos": [
+        62,
+        14
+      ],
+      "text": "AIN2"
+    },
+    {
+      "pos": [
+        8,
+        18
+      ],
+      "text": "AIN3"
+    },
+    {
+      "pos": [
+        62,
+        16
+      ],
+      "text": "AIN3"
+    }
+  ],
+  "layout_version": 1,
+  "no_connects": [
+    [
+      "U1",
+      "1"
+    ],
+    [
+      "U1",
+      "3"
+    ],
+    [
+      "U1",
+      "2"
+    ],
+    [
+      "U1",
+      "32"
+    ],
+    [
+      "U1",
+      "31"
+    ],
+    [
+      "U1",
+      "30"
+    ],
+    [
+      "U1",
+      "29"
+    ],
+    [
+      "U1",
+      "22"
+    ],
+    [
+      "U1",
+      "21"
+    ],
+    [
+      "U1",
+      "20"
+    ],
+    [
+      "U1",
+      "19"
+    ],
+    [
+      "U1",
+      "25"
+    ],
+    [
+      "U2",
+      "1"
+    ],
+    [
+      "U2",
+      "2"
+    ],
+    [
+      "U2",
+      "4"
+    ],
+    [
+      "U2",
+      "5"
+    ],
+    [
+      "U2",
+      "9"
+    ],
+    [
+      "U2",
+      "10"
+    ],
+    [
+      "U2",
+      "11"
+    ],
+    [
+      "U2",
+      "12"
+    ],
+    [
+      "U2",
+      "14"
+    ],
+    [
+      "U2",
+      "15"
+    ],
+    [
+      "U2",
+      "16"
+    ],
+    [
+      "U2",
+      "17"
+    ],
+    [
+      "U2",
+      "19"
+    ],
+    [
+      "U2",
+      "20"
+    ],
+    [
+      "U2",
+      "30"
+    ],
+    [
+      "U2",
+      "31"
+    ],
+    [
+      "U2",
+      "32"
+    ],
+    [
+      "U2",
+      "34"
+    ],
+    [
+      "U2",
+      "35"
+    ],
+    [
+      "U2",
+      "37"
+    ],
+    [
+      "U2",
+      "39"
+    ],
+    [
+      "U2",
+      "40"
+    ]
+  ],
+  "wires": []
+}

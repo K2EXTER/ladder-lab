@@ -1,0 +1,52 @@
+# DMM v1 stage A (breadboard): Raspberry Pi Pico + ADS124S08 (TQFP-32 on an adapter board) + SSD1306 OLED module.
+# The PC connects through an off-the-shelf USB isolator module (not drawn).
+# Single ground for now (AVSS = DGND = Pico GND); AVDD is the Pico 3V3 through an RC filter.
+# Build: ccad dmm/stageA_pico.ccad (kept for stage B/C; stage A uses the Arduino Mega: stageA.ccad)
+new
+add ADS124S08_TQFP as=U1
+add RPi_Pico as=U2
+add HEADER4 as=J1
+add HEADER6 as=J2
+add R 10 as=R1
+add C 10u as=C1
+add C 100n as=C2
+add C 100n as=C3
+add C 100n as=C4
+add C 1u as=C5
+
+# Supplies: digital 3V3 straight from the Pico, analog 3V3 through R1 / C1 / C2
+net 3V3 U2.36 U1.DVDD U1.IOVDD C3.1 C4.1 R1.1 J1.2
+net AVDD R1.2 U1.AVDD C1.1 C2.1
+net GND U2.3 U2.8 U2.13 U2.18 U2.23 U2.28 U2.33 U2.38 U1.AVSS U1.AVSS-SW U1.DGND U1.REFCOM U1.CLK C1.2 C2.2 C3.2 C4.2 C5.2 J1.1 J2.6
+
+# Internal 2.5 V reference: REFOUT needs 1 uF to REFCOM
+net REFOUT U1.REFOUT C5.1 J2.1
+
+# SPI0 of the Pico
+net MISO U1.DOUT/DRDY U2.21
+net CS U1.CS U2.22
+net SCLK U1.SCLK U2.24
+net MOSI U1.DIN U2.25
+net DRDY U1.DRDY U2.26
+net START U1.START/SYNC U2.27
+net RESET U1.RESET U2.29
+
+# I2C0 to the OLED module
+net SDA U2.6 J1.4
+net SCL U2.7 J1.3
+
+# Analog test inputs
+net AIN0 U1.AIN0 J2.2
+net AIN1 U1.AIN1 J2.3
+net AIN2 U1.AIN2 J2.4
+net AIN3 U1.AIN3 J2.5
+
+# Unused ADC inputs float (datasheet 10.1.5: lowest leakage); GPIOs stay analog inputs
+nc U1.AINCOM U1.AIN4 U1.AIN5 U1.REFP1/AIN6 U1.REFN1/AIN7 U1.REFP0 U1.REFN0 U1.GPIO0/AIN8 U1.GPIO1/AIN9 U1.GPIO2/AIN10 U1.GPIO3/AIN11 U1.NC
+# Unused Pico pins
+nc U2.1 U2.2 U2.4 U2.5 U2.9 U2.10 U2.11 U2.12 U2.14 U2.15 U2.16 U2.17 U2.19 U2.20 U2.30 U2.31 U2.32 U2.34 U2.35 U2.37 U2.39 U2.40
+
+pinnames J1 GND,VCC,SCL,SDA
+pinnames J2 REFOUT,AIN0,AIN1,AIN2,AIN3,GND
+erc
+save dmm/stageA_pico.schjson
