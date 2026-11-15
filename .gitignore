@@ -3,3 +3,5 @@
 *.png
 # build output of the Arduino tools
 build/
+# private records (orders, original photos, raw data); not published
+private/
