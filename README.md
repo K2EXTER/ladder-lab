@@ -16,6 +16,7 @@
 | `dmm/stageA-build.md` | 試作 A を組む手順(段ごとの合格の条件つき) |
 | `dmm/stageA.ccad`・`stageA.schjson` | 試作 A の回路図(`stageA_pico.*` は Raspberry Pi Pico 版) |
 | `dmm/firmware/dmm_stageA/` | 試作 A のファーム(Arduino Mega。シリアルのコマンド: `id` `mon` `v` `refdiff` `noise` `stream`) |
+| `dmm/firmware/dmm_stageB/` | 試作 B のファーム(リレー・レンジの切り替え・抵抗の比の測定・校正と EEPROM。ビルドだけ確かめ、実機では未確認) |
 | `tools/dmmlog.py` | PC で読み値を CSV に記録してグラフにする(`pip install pyserial matplotlib`) |
 | `dmm/spec.md`・`dmm/stageB.*` | DMM の仕様と、次の試作 B(ユニバーサル基板)の設計 |
 | `dmm/stageB-build.md` | 試作 B を組む手順(電源 → ADC → 入力 → リレーの順、段ごとの合格の条件つき) |

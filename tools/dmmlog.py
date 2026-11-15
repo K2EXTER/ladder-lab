@@ -168,7 +168,7 @@ def cmd_repeat(a):
                     print("ファームのエラー: " + line)
                     break
                 row = parse(line)
-                if "V" in row or row["kind"] in ("mon", "noise"):
+                if "V" in row or "value" in row or row["kind"] in ("mon", "noise"):
                     row = {"t_s": round(time.time() - t0, 1), "time": datetime.now().strftime("%H:%M:%S"), **row}
                     rows.append(row)
                     print(line)
