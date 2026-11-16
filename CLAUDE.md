@@ -29,6 +29,7 @@
 | `dmm/firmware/` | ファーム(Arduino Mega) |
 | `psu/spec.md` | 線形電源の仕様 |
 | `tools/dmmlog.py` | PC で記録・グラフ |
+| `eval-board/` | 評価基板(シミュレーションと実測を比べる。注文の控え・写真・古い控えは `private/eval-board/`) |
 
 元の作業場所 `F:\circuitCad\bench\`(git 対象外)には、注文の控え・写真・測定データ・記事の下書きだけが残っている。
 

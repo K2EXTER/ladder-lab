@@ -1,0 +1,831 @@
+{
+ "components": [
+  {
+   "refdes": "J1",
+   "kind": {
+    "Header": 2
+   },
+   "value": "Conn",
+   "pos": [
+    6,
+    8
+   ],
+   "rot": 0,
+   "footprint": "PinHeader_1x2",
+   "custom": null,
+   "pin_names": [
+    "5V",
+    "GND"
+   ]
+  },
+  {
+   "refdes": "U1",
+   "kind": "Custom",
+   "value": "AMS1117-3.3",
+   "pos": [
+    22,
+    10
+   ],
+   "rot": 0,
+   "footprint": "SOT-223",
+   "custom": {
+    "name": "AMS1117-3.3",
+    "prefix": "U",
+    "pins": [
+     {
+      "number": "3",
+      "name": "IN",
+      "side": "left"
+     },
+     {
+      "number": "2",
+      "name": "OUT",
+      "side": "right"
+     },
+     {
+      "number": "1",
+      "name": "GND",
+      "side": "bottom"
+     }
+    ],
+    "sim": {
+     "kind": "subckt",
+     "element": "",
+     "name": "AMS1117-3.3",
+     "text": ".subckt AMS1117-3.3 in gnd out\nVdo in ind DC 1.1\nE1 c0 gnd ind gnd 1\nVr vr gnd DC 3.3\nEx xh gnd c0 vr 1000\nD1 xh yh DREG\nRy yh gnd 1k\nEy y gnd yh gnd 0.001\nEc c gnd c0 y 1\nE2 o gnd c gnd 1\nRo o out 0.05\nG1 in gnd o out 20.0\n.model DREG D(IS=1e-12 N=1)\n.ends AMS1117-3.3",
+     "pins": [
+      "3",
+      "1",
+      "2"
+     ],
+     "params": {
+      "dropout": 1.1,
+      "vout": 3.3
+     },
+     "limits": [
+      "出力電圧、ドロップアウト (入力が低いと出力が下がる)、出力抵抗、負荷電流が入力電流になることを再現するマクロモデルです。",
+      "扱わないもの: リップル除去、負荷や入力が急に変わったときの応答、静止電流、過電流保護、熱による制限。",
+      "モデルには内部の応答がないので、入力・出力のコンデンサを付けたときの安定性 (発振しないか) は確かめられません。データシートの推奨回路に従ってください。"
+     ]
+    },
+    "ratings": {
+     "v_max": 15.0,
+     "i_max": 1.0,
+     "rows": [
+      {
+       "name": "出力電圧",
+       "value": "3.3V ±1%"
+      },
+      {
+       "name": "ドロップアウト電圧",
+       "value": "1.1V (代表)",
+       "condition": "IO = 800mA"
+      }
+     ]
+    },
+    "shops": {
+     "digikey": "AMS1117-3.3",
+     "lcsc": "C6186"
+    }
+   }
+  },
+  {
+   "refdes": "C1",
+   "kind": "Capacitor",
+   "value": "22u BIAS=61",
+   "pos": [
+    38,
+    8
+   ],
+   "rot": 0,
+   "footprint": "C_0805_Reflow",
+   "custom": null,
+   "shops": {
+    "digikey": "CL21A226MOQNNNE"
+   }
+  },
+  {
+   "refdes": "RL",
+   "kind": "Resistor",
+   "value": "150",
+   "pos": [
+    66,
+    8
+   ],
+   "rot": 0,
+   "footprint": "R_0805_Reflow",
+   "custom": null,
+   "shops": {
+    "digikey": "RC0805FR-07150RL"
+   }
+  },
+  {
+   "refdes": "J2",
+   "kind": {
+    "Header": 2
+   },
+   "value": "Conn",
+   "pos": [
+    76,
+    8
+   ],
+   "rot": 0,
+   "footprint": "PinHeader_1x2",
+   "custom": null,
+   "pin_names": [
+    "IN",
+    "GND"
+   ]
+  },
+  {
+   "refdes": "R1",
+   "kind": "Resistor",
+   "value": "1k",
+   "pos": [
+    90,
+    8
+   ],
+   "rot": 0,
+   "footprint": "R_0805_Reflow",
+   "custom": null,
+   "shops": {
+    "digikey": "RC0805FR-071KL"
+   }
+  },
+  {
+   "refdes": "C3",
+   "kind": "Capacitor",
+   "value": "100n",
+   "pos": [
+    104,
+    8
+   ],
+   "rot": 0,
+   "footprint": "C_0805_Reflow",
+   "custom": null,
+   "shops": {
+    "digikey": "CL21B104KBCNNNC"
+   }
+  },
+  {
+   "refdes": "R2",
+   "kind": "Resistor",
+   "value": "1k",
+   "pos": [
+    10,
+    24
+   ],
+   "rot": 0,
+   "footprint": "R_0805_Reflow",
+   "custom": null,
+   "shops": {
+    "digikey": "RC0805FR-071KL"
+   }
+  },
+  {
+   "refdes": "C4",
+   "kind": "Capacitor",
+   "value": "100n",
+   "pos": [
+    24,
+    24
+   ],
+   "rot": 0,
+   "footprint": "C_0805_Reflow",
+   "custom": null,
+   "shops": {
+    "digikey": "CL21B104KBCNNNC"
+   }
+  },
+  {
+   "refdes": "R3",
+   "kind": "Resistor",
+   "value": "220",
+   "pos": [
+    38,
+    24
+   ],
+   "rot": 0,
+   "footprint": "R_0805_Reflow",
+   "custom": null,
+   "shops": {
+    "digikey": "RC0805FR-07220RL"
+   }
+  },
+  {
+   "refdes": "R4",
+   "kind": "Resistor",
+   "value": "1k",
+   "pos": [
+    52,
+    24
+   ],
+   "rot": 0,
+   "footprint": "R_0805_Reflow",
+   "custom": null,
+   "shops": {
+    "digikey": "RC0805FR-071KL"
+   }
+  },
+  {
+   "refdes": "R5",
+   "kind": "Resistor",
+   "value": "10k",
+   "pos": [
+    66,
+    24
+   ],
+   "rot": 0,
+   "footprint": "R_0805_Reflow",
+   "custom": null,
+   "shops": {
+    "digikey": "RC0805FR-0710KL"
+   }
+  },
+  {
+   "refdes": "D1",
+   "kind": "Custom",
+   "value": "1N4148",
+   "pos": [
+    80,
+    25
+   ],
+   "rot": 0,
+   "footprint": "D_DO-35_P7.62",
+   "custom": {
+    "name": "1N4148",
+    "prefix": "D",
+    "pins": [
+     {
+      "number": "K",
+      "name": "K",
+      "side": "right"
+     },
+     {
+      "number": "A",
+      "name": "A",
+      "side": "left"
+     }
+    ],
+    "sim": {
+     "kind": "model",
+     "element": "D",
+     "name": "1N4148",
+     "text": ".model 1N4148 D(IS=2.52n RS=0.568 N=1.752 CJO=4p M=0.4 TT=20n BV=100 IBV=100u)",
+     "pins": [
+      "A",
+      "K"
+     ],
+     "params": {
+      "if_max": 0.2,
+      "vf_typ": 0.72,
+      "vr_max": 100.0
+     }
+    },
+    "glyph": "diode",
+    "shops": {
+     "digikey": "1N4148TR"
+    }
+   }
+  },
+  {
+   "refdes": "D2",
+   "kind": "Custom",
+   "value": "1N4148",
+   "pos": [
+    94,
+    25
+   ],
+   "rot": 0,
+   "footprint": "D_DO-35_P7.62",
+   "custom": {
+    "name": "1N4148",
+    "prefix": "D",
+    "pins": [
+     {
+      "number": "K",
+      "name": "K",
+      "side": "right"
+     },
+     {
+      "number": "A",
+      "name": "A",
+      "side": "left"
+     }
+    ],
+    "sim": {
+     "kind": "model",
+     "element": "D",
+     "name": "1N4148",
+     "text": ".model 1N4148 D(IS=2.52n RS=0.568 N=1.752 CJO=4p M=0.4 TT=20n BV=100 IBV=100u)",
+     "pins": [
+      "A",
+      "K"
+     ],
+     "params": {
+      "if_max": 0.2,
+      "vf_typ": 0.72,
+      "vr_max": 100.0
+     }
+    },
+    "glyph": "diode",
+    "shops": {
+     "digikey": "1N4148TR"
+    }
+   }
+  },
+  {
+   "refdes": "D3",
+   "kind": "Custom",
+   "value": "1N4148",
+   "pos": [
+    108,
+    25
+   ],
+   "rot": 0,
+   "footprint": "D_DO-35_P7.62",
+   "custom": {
+    "name": "1N4148",
+    "prefix": "D",
+    "pins": [
+     {
+      "number": "K",
+      "name": "K",
+      "side": "right"
+     },
+     {
+      "number": "A",
+      "name": "A",
+      "side": "left"
+     }
+    ],
+    "sim": {
+     "kind": "model",
+     "element": "D",
+     "name": "1N4148",
+     "text": ".model 1N4148 D(IS=2.52n RS=0.568 N=1.752 CJO=4p M=0.4 TT=20n BV=100 IBV=100u)",
+     "pins": [
+      "A",
+      "K"
+     ],
+     "params": {
+      "if_max": 0.2,
+      "vf_typ": 0.72,
+      "vr_max": 100.0
+     }
+    },
+    "glyph": "diode",
+    "shops": {
+     "digikey": "1N4148TR"
+    }
+   }
+  },
+  {
+   "refdes": "J3",
+   "kind": {
+    "Header": 4
+   },
+   "value": "Conn",
+   "pos": [
+    6,
+    36
+   ],
+   "rot": 0,
+   "footprint": "PinHeader_1x4",
+   "custom": null,
+   "pin_names": [
+    "F1",
+    "F2",
+    "V33",
+    "GND"
+   ]
+  },
+  {
+   "refdes": "J4",
+   "kind": {
+    "Header": 4
+   },
+   "value": "Conn",
+   "pos": [
+    16,
+    36
+   ],
+   "rot": 0,
+   "footprint": "PinHeader_1x4",
+   "custom": null,
+   "pin_names": [
+    "A1",
+    "A2",
+    "A3",
+    "GND"
+   ]
+  },
+  {
+   "refdes": "#PWR01",
+   "kind": "Ground",
+   "value": "GND",
+   "pos": [
+    8,
+    10
+   ],
+   "rot": 0,
+   "footprint": "",
+   "custom": null
+  },
+  {
+   "refdes": "V1",
+   "kind": "VSource",
+   "value": "5",
+   "pos": [
+    48,
+    38
+   ],
+   "rot": 0,
+   "footprint": "PinHeader_1x2_PM",
+   "custom": null,
+   "sim_only": true
+  },
+  {
+   "refdes": "V2",
+   "kind": "VSource",
+   "value": "0 AC 1",
+   "pos": [
+    58,
+    38
+   ],
+   "rot": 0,
+   "footprint": "PinHeader_1x2_PM",
+   "custom": null,
+   "sim_only": true
+  },
+  {
+   "refdes": "C2",
+   "kind": "Custom",
+   "value": "22u",
+   "pos": [
+    52,
+    8
+   ],
+   "rot": 0,
+   "footprint": "CT_3528-21",
+   "custom": {
+    "name": "T491B226K016AT",
+    "prefix": "C",
+    "pins": [
+     {
+      "number": "1",
+      "name": "1",
+      "side": "left"
+     },
+     {
+      "number": "2",
+      "name": "2",
+      "side": "right"
+     }
+    ],
+    "sim": {
+     "kind": "subckt",
+     "element": "",
+     "name": "T491B226K016AT",
+     "text": ".subckt T491B226K016AT 1 2\nResr 1 n_esr 2.2\nC1 n_esr 2 22u\n.ends",
+     "pins": [
+      "1",
+      "2"
+     ],
+     "params": {},
+     "limits": [
+      "ESR はデータシートの最大値 2.2Ω(100kHz・25℃)です。実物の標準値はこれより低いことがあり、周波数や温度でも変わります。ESL(自己インダクタンス)はデータシートに無いので入れていません。",
+      "温度による値の変化は扱いません。タンタルは、セラミックのような直流電圧による容量の低下は小さいので、ここでは考えません。",
+      "極性(+ が 1 番ピン)は、シミュレーションでは見ません。逆向きにつなぐと、実物は壊れます(逆電圧は定格の 15% まで、短い時間だけ。25℃)。"
+     ]
+    },
+    "ratings": {
+     "v_max": 16.0
+    },
+    "glyph": "electrolytic",
+    "shops": {
+     "digikey": "T491B226K016AT"
+    }
+   }
+  }
+ ],
+ "wires": [],
+ "labels": [
+  {
+   "pos": [
+    8,
+    8
+   ],
+   "text": "VIN"
+  },
+  {
+   "pos": [
+    18,
+    10
+   ],
+   "text": "VIN"
+  },
+  {
+   "pos": [
+    36,
+    8
+   ],
+   "text": "VIN"
+  },
+  {
+   "pos": [
+    26,
+    10
+   ],
+   "text": "V33"
+  },
+  {
+   "pos": [
+    64,
+    8
+   ],
+   "text": "V33"
+  },
+  {
+   "pos": [
+    36,
+    24
+   ],
+   "text": "V33"
+  },
+  {
+   "pos": [
+    50,
+    24
+   ],
+   "text": "V33"
+  },
+  {
+   "pos": [
+    64,
+    24
+   ],
+   "text": "V33"
+  },
+  {
+   "pos": [
+    8,
+    40
+   ],
+   "text": "V33"
+  },
+  {
+   "pos": [
+    78,
+    8
+   ],
+   "text": "SIG"
+  },
+  {
+   "pos": [
+    88,
+    8
+   ],
+   "text": "SIG"
+  },
+  {
+   "pos": [
+    92,
+    8
+   ],
+   "text": "F1"
+  },
+  {
+   "pos": [
+    102,
+    8
+   ],
+   "text": "F1"
+  },
+  {
+   "pos": [
+    8,
+    24
+   ],
+   "text": "F1"
+  },
+  {
+   "pos": [
+    8,
+    36
+   ],
+   "text": "F1"
+  },
+  {
+   "pos": [
+    12,
+    24
+   ],
+   "text": "F2"
+  },
+  {
+   "pos": [
+    22,
+    24
+   ],
+   "text": "F2"
+  },
+  {
+   "pos": [
+    8,
+    38
+   ],
+   "text": "F2"
+  },
+  {
+   "pos": [
+    8,
+    10
+   ],
+   "text": "GND"
+  },
+  {
+   "pos": [
+    22,
+    14
+   ],
+   "text": "GND"
+  },
+  {
+   "pos": [
+    40,
+    8
+   ],
+   "text": "GND"
+  },
+  {
+   "pos": [
+    68,
+    8
+   ],
+   "text": "GND"
+  },
+  {
+   "pos": [
+    78,
+    10
+   ],
+   "text": "GND"
+  },
+  {
+   "pos": [
+    106,
+    8
+   ],
+   "text": "GND"
+  },
+  {
+   "pos": [
+    26,
+    24
+   ],
+   "text": "GND"
+  },
+  {
+   "pos": [
+    82,
+    25
+   ],
+   "text": "GND"
+  },
+  {
+   "pos": [
+    96,
+    25
+   ],
+   "text": "GND"
+  },
+  {
+   "pos": [
+    110,
+    25
+   ],
+   "text": "GND"
+  },
+  {
+   "pos": [
+    8,
+    42
+   ],
+   "text": "GND"
+  },
+  {
+   "pos": [
+    18,
+    42
+   ],
+   "text": "GND"
+  },
+  {
+   "pos": [
+    40,
+    24
+   ],
+   "text": "A1"
+  },
+  {
+   "pos": [
+    78,
+    25
+   ],
+   "text": "A1"
+  },
+  {
+   "pos": [
+    18,
+    36
+   ],
+   "text": "A1"
+  },
+  {
+   "pos": [
+    54,
+    24
+   ],
+   "text": "A2"
+  },
+  {
+   "pos": [
+    92,
+    25
+   ],
+   "text": "A2"
+  },
+  {
+   "pos": [
+    18,
+    38
+   ],
+   "text": "A2"
+  },
+  {
+   "pos": [
+    68,
+    24
+   ],
+   "text": "A3"
+  },
+  {
+   "pos": [
+    106,
+    25
+   ],
+   "text": "A3"
+  },
+  {
+   "pos": [
+    18,
+    40
+   ],
+   "text": "A3"
+  },
+  {
+   "pos": [
+    48,
+    36
+   ],
+   "text": "VIN"
+  },
+  {
+   "pos": [
+    48,
+    40
+   ],
+   "text": "GND"
+  },
+  {
+   "pos": [
+    58,
+    40
+   ],
+   "text": "GND"
+  },
+  {
+   "pos": [
+    58,
+    36
+   ],
+   "text": "SIG"
+  },
+  {
+   "pos": [
+    50,
+    8
+   ],
+   "text": "V33"
+  },
+  {
+   "pos": [
+    54,
+    8
+   ],
+   "text": "GND"
+  }
+ ],
+ "layout_version": 1
+}

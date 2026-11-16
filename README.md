@@ -20,6 +20,7 @@
 | `tools/dmmlog.py` | PC で読み値を CSV に記録してグラフにする(`pip install pyserial matplotlib`) |
 | `dmm/spec.md`・`dmm/stageB.*` | DMM の仕様と、次の試作 B(ユニバーサル基板)の設計 |
 | `dmm/stageB-build.md` | 試作 B を組む手順(電源 → ADC → 入力 → リレーの順、段ごとの合格の条件つき) |
+| `eval-board/` | 評価基板(LDO 電源・RC フィルタ・ダイオード、60×36 mm)。circuitCad のシミュレーションと実測を比べる。回路図・基板・Gerber・測る手順。JLCPCB に基板 5 枚を発注済み(2026-11-09)、部品は 2026-11-16 に DigiKey で発注 |
 | `psu/spec.md`・`platform.md` | 次に作る線形電源の仕様と、機器の共通の土台の案 |
 | `log.md` | 作業の記録(日付順) |
 
