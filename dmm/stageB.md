@@ -130,7 +130,7 @@ TQ2-L2-5V は 2 コイルのラッチ型。コイルに 10 ms ほどパルスを
 | 基準抵抗 1 MΩ | 1 | 買う | Vishay P1206C1004LNT(1206 の薄膜、0.01%、5 ppm/°C) |
 | 分圧 560 kΩ・100 kΩ | 各 1 + 予備 | 買う | 560 kΩ は Susumu RG2012P-564-B-T5、100 kΩ は Panasonic ERA-6AEB104V(どちらも 0805 の薄膜、0.1%、25 ppm/°C)。比の温度の動きを決めるのは R1 との差 |
 | 分圧 10 MΩ と基準 10 MΩ | 2 + 予備 | 買う | Stackpole HVCB1206BDE10M0(1206 の厚膜、0.1%、25 ppm/°C、高電圧用)。厚膜なので R15 の値は外で校正して `cal rref` で入れる |
-| ガラエポのユニバーサル基板(SELECOCO 10 × 15 cm、Amazon)、丸ピンのソケット、入力のバインディングポスト 4 個(Voluty Tek、Amazon)、0805・1206 の変換基板 | | 買う | |
+| ガラエポのユニバーサル基板(SELECOCO 10 × 15 cm、Amazon)、丸ピンのソケット、入力のバインディングポスト 4 個(Voluty Tek、Amazon)、0805/0603 の変換基板(Moechando、Amazon。1206 と SMR3DZ は基板のランドに直接) | | 買う | |
 | USB アイソレータ | 1 | 買う | DSD TECH SH-G01A(ADuM3160、12 Mbps、出力 400 mA の表示)。Mega は USB Full Speed |
 | TBD62083APG ×2 | | 任意 | 見直しの 2 で足りなかったときの替え |
 
