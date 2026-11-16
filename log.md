@@ -96,3 +96,4 @@
 - 評価基板のファイルを `F:\circuitCad\eval-board\`(circuitCad では git の対象外で、どのリポジトリにも入っていなかった)から `eval-board/` に移した(本人の判断)。回路図・基板・Gerber・README・測る表は公開。注文の控え(`order-3boards.csv`)・写真・`backup_2026-11-09/`・`TC4421.zip` は `private/eval-board/`。`*.csv` と `*.png` は .gitignore で対象外なので、`board-*.csv`・`board_top*.png` は手元だけにある。元のフォルダはごみ箱へ。circuitCad の `docs/` に `eval-board/` を指す所が 3 つ残っている。
 - マイクロオーム計(`F:\circuitCad\microohm-meter\`、84 MB、git の対象外)は、今は移さないことにした(本人の判断)。回路図にメーカーの ADA4522 のモデルが埋め込まれていて公開できず、中身の多くはデータシートと途中の版。1.5 の段(DMM の mΩ レンジ)に入るときに、使う部分だけ持ってくる。
 - USB アイソレータは作らずに買う(SH-G01A)ことにした(本人の判断)。自作の部品代の目安は約 ¥3,000〜5,500(推測、値段は未確認。基板の送料と 1 W の DC-DC の電流が効く)。自作は試作 C のコア基板に組み込むときに考える。
+- [ソフト] Ladder Lab の進め方を circuitCad の学習パスにする候補案を、circuitCad の `docs/candidates.md` に L3 として書いた(本人の依頼)。段は ① 測る前に ② 比で測る ③ 誤差の正体 ④ 試作 A ⑤ 試作 B ⑥ 校正の連鎖 ⑦ 次の機器へ。未決: どこから作るか・学ぶ人の安い版・校正を新しい種類にするか。circuitCad 側は未コミット。[記事] 「自作の測定器で計測を学ぶ」という切り口。
