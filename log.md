@@ -94,3 +94,4 @@
 - USB アイソレータを DSD TECH SH-G01A(ADuM3160、12 Mbps、出力 400 mA の表示、Amazon ¥3,299)に決めた。スイッチサイエンスと秋月には USB アイソレータが無かった。絶縁した側の 5 V が安定化されているかは不明なので、手順書の 2 に「何もつながないときに 5.5 V を超えないか」を足した。
 - 試作 B の部品を DigiKey JP で注文した(本人の報告、2026-11-16)。中身は `private/orders/order-2026-11c.md` の「1.」(10 MΩ は 3 個)。評価基板の部品(2 回目の控えの「2.」)も同じ注文に入れた(本人の報告)。秋月・Amazon の分(基板・ソケット・USB アイソレータなど)は未報告。
 - 評価基板のファイルを `F:\circuitCad\eval-board\`(circuitCad では git の対象外で、どのリポジトリにも入っていなかった)から `eval-board/` に移した(本人の判断)。回路図・基板・Gerber・README・測る表は公開。注文の控え(`order-3boards.csv`)・写真・`backup_2026-11-09/`・`TC4421.zip` は `private/eval-board/`。`*.csv` と `*.png` は .gitignore で対象外なので、`board-*.csv`・`board_top*.png` は手元だけにある。元のフォルダはごみ箱へ。circuitCad の `docs/` に `eval-board/` を指す所が 3 つ残っている。
+- マイクロオーム計(`F:\circuitCad\microohm-meter\`、84 MB、git の対象外)は、今は移さないことにした(本人の判断)。回路図にメーカーの ADA4522 のモデルが埋め込まれていて公開できず、中身の多くはデータシートと途中の版。1.5 の段(DMM の mΩ レンジ)に入るときに、使う部分だけ持ってくる。
